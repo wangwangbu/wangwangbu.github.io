@@ -10,14 +10,14 @@
 <meta name="description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online">
 <meta name="author" content="
 作者:&nbsp;往往不">
-<link rel="canonical" href="https://wangwangbu.com/posts/tech/wsl/b-wsl/">
+<link rel="canonical" href="https://wangwangbu.github.io/posts/tech/wsl/b-wsl/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
 <script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://wangwangbu.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://wangwangbu.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://wangwangbu.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://wangwangbu.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://wangwangbu.com/safari-pinned-tab.svg">
+<link rel="icon" href="https://wangwangbu.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://wangwangbu.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://wangwangbu.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://wangwangbu.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://wangwangbu.github.io/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <noscript>
@@ -59,7 +59,7 @@
 </noscript><meta property="og:title" content="WSL 2 的安装与配置" />
 <meta property="og:description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://wangwangbu.com/posts/tech/wsl/b-wsl/" /><meta property="article:section" content="posts" />
+<meta property="og:url" content="https://wangwangbu.github.io/posts/tech/wsl/b-wsl/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2023-03-01T00:00:00+00:00" />
 <meta property="article:modified_time" content="2023-03-03T00:00:00+00:00" />
 
@@ -77,19 +77,19 @@
       "@type": "ListItem",
       "position":  1 ,
       "name": "Posts",
-      "item": "https://wangwangbu.com/posts/"
+      "item": "https://wangwangbu.github.io/posts/"
     }, 
     {
       "@type": "ListItem",
       "position":  2 ,
       "name": "技巧➕",
-      "item": "https://wangwangbu.com/posts/tech/"
+      "item": "https://wangwangbu.github.io/posts/tech/"
     }, 
     {
       "@type": "ListItem",
       "position":  3 ,
       "name": "WSL 2 的安装与配置",
-      "item": "https://wangwangbu.com/posts/tech/wsl/b-wsl/"
+      "item": "https://wangwangbu.github.io/posts/tech/wsl/b-wsl/"
     }
   ]
 }
@@ -115,14 +115,14 @@
   },
   "mainEntityOfPage": {
     "@type": "WebPage",
-    "@id": "https://wangwangbu.com/posts/tech/wsl/b-wsl/"
+    "@id": "https://wangwangbu.github.io/posts/tech/wsl/b-wsl/"
   },
   "publisher": {
     "@type": "Organization",
     "name": "往往不的攻略笔记",
     "logo": {
       "@type": "ImageObject",
-      "url": "https://wangwangbu.com/favicon.ico"
+      "url": "https://wangwangbu.github.io/favicon.ico"
     }
   }
 }
@@ -144,7 +144,7 @@
 <header class="header">
     <nav class="nav">
         <div class="logo">
-            <a href="https://wangwangbu.com/" accesskey="h" title="往往不的攻略笔记 (Alt + H)">往往不的攻略笔记</a>
+            <a href="https://wangwangbu.github.io/" accesskey="h" title="往往不的攻略笔记 (Alt + H)">往往不的攻略笔记</a>
             <div class="logo-switches">
                 <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
@@ -170,37 +170,37 @@
         </div>
         <ul id="menu">
             <li>
-                <a href="https://wangwangbu.com/search" title="🔍探索">
+                <a href="https://wangwangbu.github.io/search" title="🔍探索">
                     <span>🔍探索</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/" title="🏠出生点">
+                <a href="https://wangwangbu.github.io/" title="🏠出生点">
                     <span>🏠出生点</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/posts" title="📚攻略">
+                <a href="https://wangwangbu.github.io/posts" title="📚攻略">
                     <span>📚攻略</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/archives/" title="📝存档">
+                <a href="https://wangwangbu.github.io/archives/" title="📝存档">
                     <span>📝存档</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/tags" title="🏷️词条">
+                <a href="https://wangwangbu.github.io/tags" title="🏷️词条">
                     <span>🏷️词条</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/about" title="🧍‍♂️角色">
+                <a href="https://wangwangbu.github.io/about" title="🧍‍♂️角色">
                     <span>🧍‍♂️角色</span>
                 </a>
             </li>
             <li>
-                <a href="https://wangwangbu.com/links" title="🤝好友">
+                <a href="https://wangwangbu.github.io/links" title="🤝好友">
                     <span>🤝好友</span>
                 </a>
             </li>
@@ -211,7 +211,7 @@
 
 <article class="post-single">
   <header class="post-header">
-    <div class="breadcrumbs"><a href="https://wangwangbu.com/">Home</a>&nbsp;»&nbsp;<a href="https://wangwangbu.com/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://wangwangbu.com/posts/tech/">技巧➕</a></div>
+    <div class="breadcrumbs"><a href="https://wangwangbu.github.io/">Home</a>&nbsp;»&nbsp;<a href="https://wangwangbu.github.io/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://wangwangbu.github.io/posts/tech/">技巧➕</a></div>
     <h1 class="post-title">
       WSL 2 的安装与配置
     </h1>
@@ -230,9 +230,9 @@
 作者:&nbsp;往往不
       &nbsp;|&nbsp;标签: &nbsp;
       <ul class="post-tags-meta">
-          <a href="https://wangwangbu.com/tags/wsl/">WSL</a>
-          <a href="https://wangwangbu.com/tags/windows/">、Windows</a>
-          <a href="https://wangwangbu.com/tags/linux/">、Linux</a>
+          <a href="https://wangwangbu.github.io/tags/wsl/">WSL</a>
+          <a href="https://wangwangbu.github.io/tags/windows/">、Windows</a>
+          <a href="https://wangwangbu.github.io/tags/linux/">、Linux</a>
       </ul>
 
 </div>
@@ -568,9 +568,9 @@
 
   <footer class="post-footer">
     <ul class="post-tags">
-      <li><a href="https://wangwangbu.com/tags/wsl/">WSL</a></li>
-      <li><a href="https://wangwangbu.com/tags/windows/">Windows</a></li>
-      <li><a href="https://wangwangbu.com/tags/linux/">Linux</a></li>
+      <li><a href="https://wangwangbu.github.io/tags/wsl/">WSL</a></li>
+      <li><a href="https://wangwangbu.github.io/tags/windows/">Windows</a></li>
+      <li><a href="https://wangwangbu.github.io/tags/linux/">Linux</a></li>
     </ul>
 
   </footer>
@@ -578,7 +578,7 @@
     </main>
     
 <footer class="footer">
-    <span>&copy; 2023 <a href="https://wangwangbu.com/">往往不的攻略笔记</a></span>
+    <span>&copy; 2023 <a href="https://wangwangbu.github.io/">往往不的攻略笔记</a></span>
     <span>
         Powered by
         <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &

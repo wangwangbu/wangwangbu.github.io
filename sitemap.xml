@@ -2,88 +2,88 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wangwangbu.com/type/blog/</loc>
+    <loc>https://wangwangbu.github.io/type/blog/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/</loc>
+    <loc>https://wangwangbu.github.io/posts/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/</loc>
+    <loc>https://wangwangbu.github.io/tags/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/terminal/</loc>
+    <loc>https://wangwangbu.github.io/tags/terminal/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/type/</loc>
+    <loc>https://wangwangbu.github.io/type/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/vscode/</loc>
+    <loc>https://wangwangbu.github.io/tags/vscode/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/windows/</loc>
+    <loc>https://wangwangbu.github.io/tags/windows/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/</loc>
+    <loc>https://wangwangbu.github.io/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/linux/</loc>
+    <loc>https://wangwangbu.github.io/tags/linux/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/wsl/</loc>
+    <loc>https://wangwangbu.github.io/tags/wsl/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/wsl/b-wsl/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/wsl/b-wsl/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/cmake/</loc>
+    <loc>https://wangwangbu.github.io/tags/cmake/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/python/</loc>
+    <loc>https://wangwangbu.github.io/tags/python/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/dfs/</loc>
+    <loc>https://wangwangbu.github.io/tags/dfs/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/leetcode/</loc>
+    <loc>https://wangwangbu.github.io/tags/leetcode/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</loc>
+    <loc>https://wangwangbu.github.io/posts/algorithm/leetcode/b-leetcode-465/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/algorithm/</loc>
+    <loc>https://wangwangbu.github.io/posts/algorithm/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
+    <loc>https://wangwangbu.github.io/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/series/</loc>
+    <loc>https://wangwangbu.github.io/series/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/tags/vscode-extension/</loc>
+    <loc>https://wangwangbu.github.io/tags/vscode-extension/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/series/vscode-extension/</loc>
+    <loc>https://wangwangbu.github.io/series/vscode-extension/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-2/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-1/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</loc>
+    <loc>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url>
 </urlset>

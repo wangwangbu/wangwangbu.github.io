@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Windows on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.com/tags/windows/</link>
+    <link>https://wangwangbu.github.io/tags/windows/</link>
     <description>Recent content in Windows on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/windows/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/tags/windows/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Win10 VSCode 终端美化</title>
-      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
+      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
       <description>想法 VSCode 的终端会调用电脑装好的 shell，例如 cmd 和 Win10 自带的 PowerShell，想要美化就得从 shell 入手。关于这个 Win10 下有两套方案： 使用zsh。安装</description>
     </item>
     
     <item>
       <title>WSL 2 的安装与配置</title>
-      <link>https://wangwangbu.com/posts/tech/wsl/b-wsl/</link>
+      <link>https://wangwangbu.github.io/posts/tech/wsl/b-wsl/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/wsl/b-wsl/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/wsl/b-wsl/</guid>
       <description>前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online</description>
     </item>
     

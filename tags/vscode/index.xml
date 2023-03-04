@@ -2,44 +2,44 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>VSCode on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.com/tags/vscode/</link>
+    <link>https://wangwangbu.github.io/tags/vscode/</link>
     <description>Recent content in VSCode on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/tags/vscode/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Win10 VSCode 终端美化</title>
-      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
+      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
       <description>想法 VSCode 的终端会调用电脑装好的 shell，例如 cmd 和 Win10 自带的 PowerShell，想要美化就得从 shell 入手。关于这个 Win10 下有两套方案： 使用zsh。安装</description>
     </item>
     
     <item>
       <title>VSCode CMake 环境配置与使用</title>
-      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
+      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
       <description>前言 之前在VS Code上配置了C++编译运行的环境，详见[[I-VSCode-C++]]，但是这只针对单文件，虽然能够通过修改设置达到编译多</description>
     </item>
     
     <item>
       <title>VSCode Python 环境配置</title>
-      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
+      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
       <description>正常来说不涉及AI的Python代码编写，只需要在 Python官网中下载安装Python，在VS Code中安装Python插件，就能愉快地开</description>
     </item>
     
     <item>
       <title>VSCode Snippets 使用</title>
-      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</link>
+      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
+      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
       <description>介绍 VS Code 允许用户自定义代码段，通过自定义指令快速创建代码块。（ 官方文档） 代码块分两种： 全局代码块（在snippets目录下生成后缀名为.co</description>
     </item>
     
