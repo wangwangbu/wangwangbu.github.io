@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Series on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.com/series/</link>
+    <link>https://vercle.wangwangbu.com/series/</link>
     <description>Recent content in Series on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/series/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vercle.wangwangbu.com/series/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VSCode Extension</title>
-      <link>https://wangwangbu.com/series/vscode-extension/</link>
+      <link>https://vercle.wangwangbu.com/series/vscode-extension/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.com/series/vscode-extension/</guid>
+      <guid>https://vercle.wangwangbu.com/series/vscode-extension/</guid>
       <description></description>
     </item>
     
