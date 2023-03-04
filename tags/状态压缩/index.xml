@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>状态压缩 on 往往不的攻略笔记</title>
-    <link>https://vercle.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</link>
+    <link>https://www.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</link>
     <description>Recent content in 状态压缩 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://vercle.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode 456 我能赢么</title>
-      <link>https://vercle.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</link>
+      <link>https://www.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://vercle.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</guid>
+      <guid>https://www.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</guid>
       <description>题目链接： https://leetcode.cn/problems/can-i-win/ 思路 对于任一玩家，有两种情况： 在当前可选集合中选择i，选择后满足大于等于desiredTotal，则该玩家赢。 不满足 1. 的情况下，</description>
     </item>
     
