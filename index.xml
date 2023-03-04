@@ -2,80 +2,80 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>往往不的攻略笔记</title>
-    <link>https://wangwangbu.github.io/</link>
+    <link>https://wangwangbu.com/</link>
     <description>Recent content on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Win10 VSCode 终端美化</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</guid>
       <description>想法 VSCode 的终端会调用电脑装好的 shell，例如 cmd 和 Win10 自带的 PowerShell，想要美化就得从 shell 入手。关于这个 Win10 下有两套方案： 使用zsh。安装</description>
     </item>
     
     <item>
       <title>WSL 2 的安装与配置</title>
-      <link>https://wangwangbu.github.io/posts/tech/wsl/b-wsl/</link>
+      <link>https://wangwangbu.com/posts/tech/wsl/b-wsl/</link>
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/wsl/b-wsl/</guid>
+      <guid>https://wangwangbu.com/posts/tech/wsl/b-wsl/</guid>
       <description>前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online</description>
     </item>
     
     <item>
       <title>VSCode CMake 环境配置与使用</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
       <description>前言 之前在VS Code上配置了C++编译运行的环境，详见[[I-VSCode-C++]]，但是这只针对单文件，虽然能够通过修改设置达到编译多</description>
     </item>
     
     <item>
       <title>VSCode Python 环境配置</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
       <description>正常来说不涉及AI的Python代码编写，只需要在 Python官网中下载安装Python，在VS Code中安装Python插件，就能愉快地开</description>
     </item>
     
     <item>
       <title>Leetcode 456 我能赢么</title>
-      <link>https://wangwangbu.github.io/posts/algorithm/leetcode/b-leetcode-465/</link>
+      <link>https://wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/algorithm/leetcode/b-leetcode-465/</guid>
+      <guid>https://wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</guid>
       <description>题目链接： https://leetcode.cn/problems/can-i-win/ 思路 对于任一玩家，有两种情况： 在当前可选集合中选择i，选择后满足大于等于desiredTotal，则该玩家赢。 不满足 1. 的情况下，</description>
     </item>
     
     <item>
       <title>VSCode Extension (2) 插件能力</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-2/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
       <description>创建指令 开发者可以为动作指定指令，通过两步操作： 在package.json的contributes.commands定义命令。 在主要文件中使</description>
     </item>
     
     <item>
       <title>VSCode Extension (1) 安装和运行</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-1/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
       <description>前言 上来先放VS Code插件开发的 官方文档，说实话非常详细，没必要再看其他教程。 该系列文章只是作为我学习的记录，也可在一些问题上给大家提供思</description>
     </item>
     
     <item>
       <title>VSCode Snippets 使用</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
       <description>介绍 VS Code 允许用户自定义代码段，通过自定义指令快速创建代码块。（ 官方文档） 代码块分两种： 全局代码块（在snippets目录下生成后缀名为.co</description>
     </item>
     

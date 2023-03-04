@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>VSCode Extension on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.github.io/tags/vscode-extension/</link>
+    <link>https://wangwangbu.com/tags/vscode-extension/</link>
     <description>Recent content in VSCode Extension on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/tags/vscode-extension/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/vscode-extension/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VSCode Extension (2) 插件能力</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-2/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
       <description>创建指令 开发者可以为动作指定指令，通过两步操作： 在package.json的contributes.commands定义命令。 在主要文件中使</description>
     </item>
     
     <item>
       <title>VSCode Extension (1) 安装和运行</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-1/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
       <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
       <description>前言 上来先放VS Code插件开发的 官方文档，说实话非常详细，没必要再看其他教程。 该系列文章只是作为我学习的记录，也可在一些问题上给大家提供思</description>
     </item>
     

@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>CMake on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.github.io/tags/cmake/</link>
+    <link>https://wangwangbu.com/tags/cmake/</link>
     <description>Recent content in CMake on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 06 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 06 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/cmake/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VSCode CMake 环境配置与使用</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
       <description>前言 之前在VS Code上配置了C++编译运行的环境，详见[[I-VSCode-C++]]，但是这只针对单文件，虽然能够通过修改设置达到编译多</description>
     </item>
     

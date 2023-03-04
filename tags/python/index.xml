@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Python on 往往不的攻略笔记</title>
-    <link>https://wangwangbu.github.io/tags/python/</link>
+    <link>https://wangwangbu.com/tags/python/</link>
     <description>Recent content in Python on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 06 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/python/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>VSCode Python 环境配置</title>
-      <link>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
+      <link>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
       <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://wangwangbu.github.io/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
+      <guid>https://wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
       <description>正常来说不涉及AI的Python代码编写，只需要在 Python官网中下载安装Python，在VS Code中安装Python插件，就能愉快地开</description>
     </item>
     
