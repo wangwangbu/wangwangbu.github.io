@@ -1,697 +1,99 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>WSL 2 的安装与配置 | 往往不的攻略笔记</title>
-<meta name="keywords" content="WSL, Windows, Linux">
-<meta name="description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online">
-<meta name="author" content="
-作者:&nbsp;往往不">
-<link rel="canonical" href="https://wangwangbu.com/posts/tech/wsl/b-wsl/">
-<link crossorigin="anonymous" href="/assets/css/stylesheet.css" rel="preload stylesheet" as="style">
-<script defer crossorigin="anonymous" src="/assets/js/highlight.js" onload="hljs.initHighlightingOnLoad();"></script>
-<link rel="icon" href="https://wangwangbu.com/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://wangwangbu.com/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://wangwangbu.com/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://wangwangbu.com/apple-touch-icon.png">
-<link rel="mask-icon" href="https://wangwangbu.com/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --hljs-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-track {
-                background: 0 0;
-            }
-
-            .list:not(.dark)::-webkit-scrollbar-thumb {
-                border-color: var(--theme);
-            }
-        }
-
-    </style>
-</noscript><meta property="og:title" content="WSL 2 的安装与配置" />
-<meta property="og:description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online" />
-<meta property="og:type" content="article" />
-<meta property="og:url" content="https://wangwangbu.com/posts/tech/wsl/b-wsl/" /><meta property="article:section" content="posts" />
-<meta property="article:published_time" content="2023-03-01T00:00:00+00:00" />
-<meta property="article:modified_time" content="2023-03-03T00:00:00+00:00" />
-
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="WSL 2 的安装与配置"/>
-<meta name="twitter:description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online"/>
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://wangwangbu.com/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "技巧➕",
-      "item": "https://wangwangbu.com/posts/tech/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  3 ,
-      "name": "WSL 2 的安装与配置",
-      "item": "https://wangwangbu.com/posts/tech/wsl/b-wsl/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "WSL 2 的安装与配置",
-  "name": "WSL 2 的安装与配置",
-  "description": "前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online",
-  "keywords": [
-    "WSL", "Windows", "Linux"
-  ],
-  "articleBody": "前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令：\n1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart 会提示设置重启生效，可以等下一步完成一起重启，接下来安装 Linux 的发行版本。\n安装 可以在 Microsoft 商店选择喜欢的 Linux 版本，包括 Ubuntu、SUSE、Kali等，或是使用命令wsl --install就可完成，但一般默认装在 C 盘。\n想装在其他盘可以使用下面的方法，以 Ubuntu 20.04 为例。\n下载并安装 WSL 2 内核更新包：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi\n选择或创建一个你喜欢的目录，例如D:\\Linux，输入命令下载安装 Ubuntu 20.04。\n1 Invoke-WebRequest -Uri https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_x64.appx -OutFile Ubuntu20.04.appx -UseBasicParsing 可以看到D:\\Linux目录下有一个Ubuntu20.04.appx，然后执行下面的命令：\n1 2 Rename-Item .\\Ubuntu20.04.appx Ubuntu.zip Expand-Archive .\\Ubuntu.zip -Verbose 此时 Ubuntu 20.04 就安装完成了，重启之后在命令行输入：\n1 2 # 设置 WSL 2 wsl --set-default-version 2 双击D:\\Linux\\Ubuntu目录下的ubuntu2004.exe即可启动 Ubuntu，一开始会安装一些包和让你设置用户名密码。有问题可以先重启尝试解决。\n第一次成功启动后，在微软的“终端”应用中已经可以新建 WSL 连接。\n更换 apt 源 Ubuntu 使用 apt 安装应用，因为网络问题需要给 apt 换成国内的源，如阿里云源或清华源。\n首先备份一下源文件，将sources.list拷贝一份sources.list.bak：\n1 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 然后打开sources.list文件进行修改，使用 vim 或 nano 等编辑器都可，这里使用 vim，按i进入编辑模式。\n1 sudo vim /etc/apt/sources.list 打开之后添加源地址：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #添加阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse #添加清华源 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse multiverse 修改完保存退出，vim 按Esc退出编辑模式后，输入:wq保存退出，nano 使用Ctrl+O保存Ctrl+X退出。\n换源后更新源：\n1 sudo apt-get update 更新软件，显示我有 579 个可更新，还是花了一点时间，可以用到时再更新：\n1 sudo apt-get upgrade 问题 WSL 安装怎么可能那么顺利，还是遇到一些问题。\n更新源不成功 在给 apt 换源后更新源会报错，可能是Failed to fetch的报错，也可能是证书问题Certificate verification failed，需要使用对应的方法解决。\nFetch 失败：\n一般是 DNS 服务器问题，默认 WSL 使用的本机连接 DNS 服务器，不行的话需要修改。\nUbuntu 的配置文件在/etc/resolv.conf（注意不是resolve），可以使用cat /etc/resolv.conf命令查看，文件头就写着“该文件自动生成，取消自动生成应该。。。”。为了我们的设置不在重启后被覆盖，就按他说的设置/etc/wsl.conf文件。\n使用vim打开/etc/wsl.conf，在文件中添加：\n1 2 [network] generateResolvConf=false 注意是...Resolv...，保存关闭。\n然后就可以设置/etc/resolv.conf文件了：\n1 sudo vim /etc/resolv.conf 添加你想要的 DNS 服务器地址，例如：\n1 nameserver 8.8.8.8 也可以添加别的：阿里云223.6.6.6，223.5.5.5，腾讯119.29.29.29。\n保存退出之后再使用更新源就行了，即使下次重启 WSL 之后配置也不会修改。\n如果遇到无法保存的错误\"Can’t open linked file for writing\"，此时resolv.conf是一个链接，尝试删除之后再用 vim 新建文件：\n1 2 3 4 # 删除文件 sudo rm /etc/resolv.conf # 再次编辑 sudo vim /etc/resolv.conf 参考：https://www.zhihu.com/question/421854017\n证书验证失败：\ndate查看时间是否正确，排除时间造成的证书问题。 通过sudo apt install ca-certificates --reinstall无法更新安装包。 手动下载ca-certificates.deb文件重新安装最新版。 文件从\r此处下载，选择对应 Linux 版本，例如我是 Ubuntu 20.04 LTS (Focal Fossa)，选择一个最新版点击：\n网页拉到下面有一个安装地址：\n在 Ubuntu 终端我们进到tmp目录下载下来：\n1 2 cd /tmp wget http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.20.04.1_all.deb 如果提示以下错误，可以先尝试配置 DNS 服务器，见上一条Fetch 失败的方法，然后使用apt安装：sudo apt install ca-certificates --reinstall\n如果成功下载下来，使用dpkg命令安装：\n1 dpkg -i ./ca-certificates_20211016ubuntu0.20.04.1_all.deb 再使用sudo apt-get update试试。\n参考：https://juejin.cn/post/7033412379727626247\n",
-  "wordCount" : "1855",
-  "inLanguage": "en",
-  "datePublished": "2023-03-01T00:00:00Z",
-  "dateModified": "2023-03-03T00:00:00Z",
-  "author":{
-    "@type": "Person",
-    "name": "往往不"
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://wangwangbu.com/posts/tech/wsl/b-wsl/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "往往不的攻略笔记",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://wangwangbu.com/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-
-<body class="" id="top">
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.body.classList.add('dark');
-    } else if (localStorage.getItem("pref-theme") === "light") {
-        document.body.classList.remove('dark')
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.body.classList.add('dark');
-    }
-
-</script>
-
-<header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://wangwangbu.com/" accesskey="h" title="往往不的攻略笔记 (Alt + H)">往往不的攻略笔记</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://wangwangbu.com/search" title="🔍探索">
-                    <span>🔍探索</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/" title="🏠出生点">
-                    <span>🏠出生点</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/posts" title="📚攻略">
-                    <span>📚攻略</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/archives/" title="📝存档">
-                    <span>📝存档</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/tags" title="🏷️词条">
-                    <span>🏷️词条</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/about" title="🧍‍♂️角色">
-                    <span>🧍‍♂️角色</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://wangwangbu.com/links" title="🤝好友">
-                    <span>🤝好友</span>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    <div class="breadcrumbs"><a href="https://wangwangbu.com/">Home</a>&nbsp;»&nbsp;<a href="https://wangwangbu.com/posts/">Posts</a>&nbsp;»&nbsp;<a href="https://wangwangbu.com/posts/tech/">技巧➕</a></div>
-    <h1 class="post-title">
-      WSL 2 的安装与配置
-    </h1>
-    <div class="post-meta">
-
-
-
-
-
-
-
-
-
-
-创建:&nbsp;<span title='2023-03-01 00:00:00 +0000 UTC'>2023-03-01</span>&nbsp;|&nbsp;更新:&nbsp;2023-03-03&nbsp;|&nbsp;字数:&nbsp;1855字&nbsp;|&nbsp;时长: 4分钟&nbsp;|&nbsp;
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=x-ua-compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>WSL 2 的安装与配置 | 往往不的攻略笔记</title><meta name=keywords content="WSL,Windows,Linux"><meta name=description content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online"><meta name=author content="
+作者:&nbsp;往往不"><link rel=canonical href=https://wangwangbu.com/posts/tech/wsl/b-wsl/><link crossorigin=anonymous href=/assets/css/stylesheet.css rel="preload stylesheet" as=style><script defer crossorigin=anonymous src=/assets/js/highlight.js onload=hljs.initHighlightingOnLoad()></script>
+<link rel=icon href=https://wangwangbu.com/favicon.ico><link rel=icon type=image/png sizes=16x16 href=https://wangwangbu.com/favicon-16x16.png><link rel=icon type=image/png sizes=32x32 href=https://wangwangbu.com/favicon-32x32.png><link rel=apple-touch-icon href=https://wangwangbu.com/apple-touch-icon.png><link rel=mask-icon href=https://wangwangbu.com/safari-pinned-tab.svg><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--hljs-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="WSL 2 的安装与配置"><meta property="og:description" content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online"><meta property="og:type" content="article"><meta property="og:url" content="https://wangwangbu.com/posts/tech/wsl/b-wsl/"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-03-01T00:00:00+00:00"><meta property="article:modified_time" content="2023-03-03T00:00:00+00:00"><meta name=twitter:card content="summary"><meta name=twitter:title content="WSL 2 的安装与配置"><meta name=twitter:description content="前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://wangwangbu.com/posts/"},{"@type":"ListItem","position":2,"name":"技巧➕","item":"https://wangwangbu.com/posts/tech/"},{"@type":"ListItem","position":3,"name":"WSL 2 的安装与配置","item":"https://wangwangbu.com/posts/tech/wsl/b-wsl/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"WSL 2 的安装与配置","name":"WSL 2 的安装与配置","description":"前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online","keywords":["WSL","Windows","Linux"],"articleBody":"前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令：\n1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart 会提示设置重启生效，可以等下一步完成一起重启，接下来安装 Linux 的发行版本。\n安装 可以在 Microsoft 商店选择喜欢的 Linux 版本，包括 Ubuntu、SUSE、Kali等，或是使用命令wsl --install就可完成，但一般默认装在 C 盘。\n想装在其他盘可以使用下面的方法，以 Ubuntu 20.04 为例。\n下载并安装 WSL 2 内核更新包：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi\n选择或创建一个你喜欢的目录，例如D:\\Linux，输入命令下载安装 Ubuntu 20.04。\n1 Invoke-WebRequest -Uri https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_x64.appx -OutFile Ubuntu20.04.appx -UseBasicParsing 可以看到D:\\Linux目录下有一个Ubuntu20.04.appx，然后执行下面的命令：\n1 2 Rename-Item .\\Ubuntu20.04.appx Ubuntu.zip Expand-Archive .\\Ubuntu.zip -Verbose 此时 Ubuntu 20.04 就安装完成了，重启之后在命令行输入：\n1 2 # 设置 WSL 2 wsl --set-default-version 2 双击D:\\Linux\\Ubuntu目录下的ubuntu2004.exe即可启动 Ubuntu，一开始会安装一些包和让你设置用户名密码。有问题可以先重启尝试解决。\n第一次成功启动后，在微软的“终端”应用中已经可以新建 WSL 连接。\n更换 apt 源 Ubuntu 使用 apt 安装应用，因为网络问题需要给 apt 换成国内的源，如阿里云源或清华源。\n首先备份一下源文件，将sources.list拷贝一份sources.list.bak：\n1 sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak 然后打开sources.list文件进行修改，使用 vim 或 nano 等编辑器都可，这里使用 vim，按i进入编辑模式。\n1 sudo vim /etc/apt/sources.list 打开之后添加源地址：\n1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 #添加阿里源 deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse #添加清华源 deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse # deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse multiverse 修改完保存退出，vim 按Esc退出编辑模式后，输入:wq保存退出，nano 使用Ctrl+O保存Ctrl+X退出。\n换源后更新源：\n1 sudo apt-get update 更新软件，显示我有 579 个可更新，还是花了一点时间，可以用到时再更新：\n1 sudo apt-get upgrade 问题 WSL 安装怎么可能那么顺利，还是遇到一些问题。\n更新源不成功 在给 apt 换源后更新源会报错，可能是Failed to fetch的报错，也可能是证书问题Certificate verification failed，需要使用对应的方法解决。\nFetch 失败：\n一般是 DNS 服务器问题，默认 WSL 使用的本机连接 DNS 服务器，不行的话需要修改。\nUbuntu 的配置文件在/etc/resolv.conf（注意不是resolve），可以使用cat /etc/resolv.conf命令查看，文件头就写着“该文件自动生成，取消自动生成应该。。。”。为了我们的设置不在重启后被覆盖，就按他说的设置/etc/wsl.conf文件。\n使用vim打开/etc/wsl.conf，在文件中添加：\n1 2 [network] generateResolvConf=false 注意是...Resolv...，保存关闭。\n然后就可以设置/etc/resolv.conf文件了：\n1 sudo vim /etc/resolv.conf 添加你想要的 DNS 服务器地址，例如：\n1 nameserver 8.8.8.8 也可以添加别的：阿里云223.6.6.6，223.5.5.5，腾讯119.29.29.29。\n保存退出之后再使用更新源就行了，即使下次重启 WSL 之后配置也不会修改。\n如果遇到无法保存的错误\"Can’t open linked file for writing\"，此时resolv.conf是一个链接，尝试删除之后再用 vim 新建文件：\n1 2 3 4 # 删除文件 sudo rm /etc/resolv.conf # 再次编辑 sudo vim /etc/resolv.conf 参考：https://www.zhihu.com/question/421854017\n证书验证失败：\ndate查看时间是否正确，排除时间造成的证书问题。 通过sudo apt install ca-certificates --reinstall无法更新安装包。 手动下载ca-certificates.deb文件重新安装最新版。 文件从\r此处下载，选择对应 Linux 版本，例如我是 Ubuntu 20.04 LTS (Focal Fossa)，选择一个最新版点击：\n网页拉到下面有一个安装地址：\n在 Ubuntu 终端我们进到tmp目录下载下来：\n1 2 cd /tmp wget http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.20.04.1_all.deb 如果提示以下错误，可以先尝试配置 DNS 服务器，见上一条Fetch 失败的方法，然后使用apt安装：sudo apt install ca-certificates --reinstall\n如果成功下载下来，使用dpkg命令安装：\n1 dpkg -i ./ca-certificates_20211016ubuntu0.20.04.1_all.deb 再使用sudo apt-get update试试。\n参考：https://juejin.cn/post/7033412379727626247\n","wordCount":"1855","inLanguage":"en","datePublished":"2023-03-01T00:00:00Z","dateModified":"2023-03-03T00:00:00Z","author":{"@type":"Person","name":"往往不"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://wangwangbu.com/posts/tech/wsl/b-wsl/"},"publisher":{"@type":"Organization","name":"往往不的攻略笔记","logo":{"@type":"ImageObject","url":"https://wangwangbu.com/favicon.ico"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://wangwangbu.com/ accesskey=h title="往往不的攻略笔记 (Alt + H)">往往不的攻略笔记</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://wangwangbu.com/search title=🔍探索><span>🔍探索</span></a></li><li><a href=https://wangwangbu.com/ title=🏠出生点><span>🏠出生点</span></a></li><li><a href=https://wangwangbu.com/posts title=📚攻略><span>📚攻略</span></a></li><li><a href=https://wangwangbu.com/archives/ title=📝存档><span>📝存档</span></a></li><li><a href=https://wangwangbu.com/tags title=🏷️词条><span>🏷️词条</span></a></li><li><a href=https://wangwangbu.com/about title=🧍‍♂️角色><span>🧍‍♂️角色</span></a></li><li><a href=https://wangwangbu.com/links title=🤝好友><span>🤝好友</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://wangwangbu.com/>Home</a>&nbsp;»&nbsp;<a href=https://wangwangbu.com/posts/>Posts</a>&nbsp;»&nbsp;<a href=https://wangwangbu.com/posts/tech/>技巧➕</a></div><h1 class=post-title>WSL 2 的安装与配置</h1><div class=post-meta>创建:&nbsp;<span title='2023-03-01 00:00:00 +0000 UTC'>2023-03-01</span>&nbsp;|&nbsp;更新:&nbsp;2023-03-03&nbsp;|&nbsp;字数:&nbsp;1855字&nbsp;|&nbsp;时长: 4分钟&nbsp;|&nbsp;
 作者:&nbsp;往往不
-      &nbsp;|&nbsp;标签: &nbsp;
-      <ul class="post-tags-meta">
-          <a href="https://wangwangbu.com/tags/wsl/">WSL</a>
-          <a href="https://wangwangbu.com/tags/windows/">、Windows</a>
-          <a href="https://wangwangbu.com/tags/linux/">、Linux</a>
-      </ul>
-
-</div>
-  </header> <aside id="toc-container" class="toc-container wide">
-    <div class="toc">
-        <details  open>
-            <summary accesskey="c" title="(Alt + C)">
-                <span class="details">Table of Contents</span>
-            </summary>
-
-            <div class="inner"><ul>
-                    <li>
-                        <a href="#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c" aria-label="前置工作">前置工作</a></li>
-                    <li>
-                        <a href="#%e5%ae%89%e8%a3%85" aria-label="安装">安装</a></li>
-                    <li>
-                        <a href="#%e6%9b%b4%e6%8d%a2-apt-%e6%ba%90" aria-label="更换 apt 源">更换 apt 源</a></li>
-                    <li>
-                        <a href="#%e9%97%ae%e9%a2%98" aria-label="问题">问题</a><ul>
-                            
-                    <li>
-                        <a href="#%e6%9b%b4%e6%96%b0%e6%ba%90%e4%b8%8d%e6%88%90%e5%8a%9f" aria-label="更新源不成功">更新源不成功</a>
-                    </li>
-                </ul>
-                </li>
-                </ul>
-            </div>
-        </details>
-    </div>
-</aside>
-<script>
-    let activeElement;
-    let elements;
-    window.addEventListener('DOMContentLoaded', function (event) {
-        checkTocPosition();
-
-        elements = document.querySelectorAll('h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]');
-         
-         activeElement = elements[0];
-         const id = encodeURI(activeElement.getAttribute('id')).toLowerCase();
-         document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-     }, false);
-
-    window.addEventListener('resize', function(event) {
-        checkTocPosition();
-    }, false);
-
-    window.addEventListener('scroll', () => {
-        
-        activeElement = Array.from(elements).find((element) => {
-            if ((getOffsetTop(element) - window.pageYOffset) > 0 && 
-                (getOffsetTop(element) - window.pageYOffset) < window.innerHeight/2) {
-                return element;
-            }
-        }) || activeElement
-
-        elements.forEach(element => {
-             const id = encodeURI(element.getAttribute('id')).toLowerCase();
-             if (element === activeElement){
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.add('active');
-             } else {
-                 document.querySelector(`.inner ul li a[href="#${id}"]`).classList.remove('active');
-             }
-         })
-     }, false);
-
-    const main = parseInt(getComputedStyle(document.body).getPropertyValue('--article-width'), 10);
-    const toc = parseInt(getComputedStyle(document.body).getPropertyValue('--toc-width'), 10);
-    const gap = parseInt(getComputedStyle(document.body).getPropertyValue('--gap'), 10);
-
-    function checkTocPosition() {
-        const width = document.body.scrollWidth;
-
-        if (width - main - (toc * 2) - (gap * 4) > 0) {
-            document.getElementById("toc-container").classList.add("wide");
-        } else {
-            document.getElementById("toc-container").classList.remove("wide");
-        }
-    }
-
-    function getOffsetTop(element) {
-        if (!element.getClientRects().length) {
-            return 0;
-        }
-        let rect = element.getBoundingClientRect();
-        let win = element.ownerDocument.defaultView;
-        return rect.top + win.pageYOffset;   
-    }
-</script>
-  <div class="post-content"><h2 id="前置工作">前置工作<a hidden class="anchor" aria-hidden="true" href="#前置工作">#</a></h2>
-<p>需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># 开启 WSL 功能</span>
-</span></span><span style="display:flex;"><span>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
-</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 开启 Hyper-V 功能</span>
-</span></span><span style="display:flex;"><span>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>会提示设置重启生效，可以等下一步完成一起重启，接下来安装 Linux 的发行版本。</p>
-<h2 id="安装">安装<a hidden class="anchor" aria-hidden="true" href="#安装">#</a></h2>
-<p>可以在 Microsoft 商店选择喜欢的 Linux 版本，包括 Ubuntu、SUSE、Kali等，或是使用命令<code>wsl --install</code>就可完成，但一般默认装在 C 盘。</p>
-<p>想装在其他盘可以使用下面的方法，以 Ubuntu 20.04 为例。</p>
-<p>下载并安装 WSL 2 内核更新包：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi</p>
-<p>选择或创建一个你喜欢的目录，例如<code>D:\Linux</code>，输入命令下载安装 Ubuntu 20.04。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Invoke-WebRequest -Uri https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_x64.appx -OutFile Ubuntu20.04.appx -UseBasicParsing
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>可以看到<code>D:\Linux</code>目录下有一个<code>Ubuntu20.04.appx</code>，然后执行下面的命令：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>Rename-Item .<span style="color:#0ff;font-weight:bold">\U</span>buntu20.04.appx Ubuntu.zip
-</span></span><span style="display:flex;"><span>Expand-Archive .<span style="color:#0ff;font-weight:bold">\U</span>buntu.zip -Verbose
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>此时 Ubuntu 20.04 就安装完成了，重启之后在命令行输入：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># 设置 WSL 2</span>
-</span></span><span style="display:flex;"><span>wsl --set-default-version <span style="color:#ff0;font-weight:bold">2</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>双击<code>D:\Linux\Ubuntu</code>目录下的<code>ubuntu2004.exe</code>即可启动 Ubuntu，一开始会安装一些包和让你设置用户名密码。有问题可以先重启尝试解决。</p>
-<p>第一次成功启动后，在微软的“终端”应用中已经可以新建 WSL 连接。</p>
-<h2 id="更换-apt-源">更换 apt 源<a hidden class="anchor" aria-hidden="true" href="#更换-apt-源">#</a></h2>
-<p>Ubuntu 使用 apt 安装应用，因为网络问题需要给 apt 换成国内的源，如阿里云源或清华源。</p>
-<p>首先备份一下源文件，将<code>sources.list</code>拷贝一份<code>sources.list.bak</code>：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>然后打开<code>sources.list</code>文件进行修改，使用 vim 或 nano 等编辑器都可，这里使用 vim，按<code>i</code>进入编辑模式。</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo vim /etc/apt/sources.list
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>打开之后添加源地址：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 4
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 5
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 6
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 7
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 8
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272"> 9
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">10
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">11
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">12
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">13
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">14
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">15
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">16
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">17
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">18
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">19
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">20
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>#添加阿里源
-</span></span><span style="display:flex;"><span>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
-</span></span><span style="display:flex;"><span>#添加清华源
-</span></span><span style="display:flex;"><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-</span></span><span style="display:flex;"><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-</span></span><span style="display:flex;"><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-</span></span><span style="display:flex;"><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
-</span></span><span style="display:flex;"><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
-</span></span><span style="display:flex;"><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse multiverse
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>修改完保存退出，vim 按<code>Esc</code>退出编辑模式后，输入<code>:wq</code>保存退出，nano 使用<code>Ctrl+O</code>保存<code>Ctrl+X</code>退出。</p>
-<p>换源后更新源：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get update
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>更新软件，显示我有 579 个可更新，还是花了一点时间，可以用到时再更新：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo apt-get upgrade
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="问题">问题<a hidden class="anchor" aria-hidden="true" href="#问题">#</a></h2>
-<p>WSL 安装怎么可能那么顺利，还是遇到一些问题。</p>
-<h3 id="更新源不成功">更新源不成功<a hidden class="anchor" aria-hidden="true" href="#更新源不成功">#</a></h3>
-<p>在给 apt 换源后更新源会报错，可能是<code>Failed to fetch</code>的报错，也可能是证书问题<code>Certificate verification failed</code>，需要使用对应的方法解决。</p>
-<p><strong>Fetch 失败</strong>：</p>
-<p>一般是 DNS 服务器问题，默认 WSL 使用的本机连接 DNS 服务器，不行的话需要修改。</p>
-<p>Ubuntu 的配置文件在<code>/etc/resolv.conf</code>（注意不是<code>resolve</code>），可以使用<code>cat /etc/resolv.conf</code>命令查看，文件头就写着“该文件自动生成，取消自动生成应该。。。”。为了我们的设置不在重启后被覆盖，就按他说的设置<code>/etc/wsl.conf</code>文件。</p>
-<p>使用<code>vim</code>打开<code>/etc/wsl.conf</code>，在文件中添加：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>[network]
-</span></span><span style="display:flex;"><span>generateResolvConf=<span style="color:#fff;font-weight:bold">false</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>注意是<code>...Resolv...</code>，保存关闭。</p>
-<p>然后就可以设置<code>/etc/resolv.conf</code>文件了：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>sudo vim /etc/resolv.conf
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>添加你想要的 DNS 服务器地址，例如：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-text" data-lang="text"><span style="display:flex;"><span>nameserver 8.8.8.8
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>也可以添加别的：阿里云<code>223.6.6.6</code>，<code>223.5.5.5</code>，腾讯<code>119.29.29.29</code>。</p>
-<p>保存退出之后再使用更新源就行了，即使下次重启 WSL 之后配置也不会修改。</p>
-<p>如果遇到无法保存的错误&quot;Can&rsquo;t open linked file for writing&quot;，此时<code>resolv.conf</code>是一个链接，尝试删除之后再用 vim 新建文件：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">3
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">4
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#007f7f"># 删除文件</span>
-</span></span><span style="display:flex;"><span>sudo rm /etc/resolv.conf
-</span></span><span style="display:flex;"><span><span style="color:#007f7f"># 再次编辑</span>
-</span></span><span style="display:flex;"><span>sudo vim /etc/resolv.conf
-</span></span></code></pre></td></tr></table>
-</div>
-</div><blockquote>
-<p>参考：https://www.zhihu.com/question/421854017</p>
-</blockquote>
-<p><strong>证书验证失败</strong>：</p>
-<ol>
-<li><code>date</code>查看时间是否正确，排除时间造成的证书问题。</li>
-<li>通过<code>sudo apt install ca-certificates --reinstall</code>无法更新安装包。</li>
-<li>手动下载<code>ca-certificates.deb</code>文件重新安装最新版。</li>
-</ol>
-<p>文件从
-
-<a href="../https:/link.juejin.cn/?target=https%3A%2F%2Fpkgs.org%2Fdownload%2Fca-certificates" target="_blank" rel="noopener">此处</a>下载，选择对应 Linux 版本，例如我是 Ubuntu 20.04 LTS (Focal Fossa)，选择一个最新版点击：</p>
-<p>
-
-
-<img loading="lazy" src="/posts/tech/wsl/images/2023-03-01-16-26-08.png" alt=""  /></p>
-<p>网页拉到下面有一个安装地址：</p>
-<p>
-
-
-<img loading="lazy" src="/posts/tech/wsl/images/2023-03-01-16-27-35.png" alt=""  /></p>
-<p>在 Ubuntu 终端我们进到<code>tmp</code>目录下载下来：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">2
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span><span style="color:#fff;font-weight:bold">cd</span> /tmp
-</span></span><span style="display:flex;"><span>wget http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.20.04.1_all.deb
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>如果提示以下错误，可以先尝试配置 DNS 服务器，见上一条<strong>Fetch 失败</strong>的方法，然后使用<code>apt</code>安装：<code>sudo apt install ca-certificates --reinstall</code></p>
-<p>如果成功下载下来，使用<code>dpkg</code>命令安装：</p>
-<div class="highlight"><div style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">
-<table style="border-spacing:0;padding:0;margin:0;border:0;"><tr><td style="vertical-align:top;padding:0;margin:0;border:0;">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code><span style="white-space:pre;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#727272">1
-</span></code></pre></td>
-<td style="vertical-align:top;padding:0;margin:0;border:0;;width:100%">
-<pre tabindex="0" style="color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-shell" data-lang="shell"><span style="display:flex;"><span>dpkg -i ./ca-certificates_20211016ubuntu0.20.04.1_all.deb
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>再使用<code>sudo apt-get update</code>试试。</p>
-<blockquote>
-<p>参考：https://juejin.cn/post/7033412379727626247</p>
-</blockquote>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-      <li><a href="https://wangwangbu.com/tags/wsl/">WSL</a></li>
-      <li><a href="https://wangwangbu.com/tags/windows/">Windows</a></li>
-      <li><a href="https://wangwangbu.com/tags/linux/">Linux</a></li>
-    </ul>
-
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-    <span>&copy; 2023 <a href="https://wangwangbu.com/">往往不的攻略笔记</a></span>
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu')
-    if (menu) {
-        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
-        } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
-        }
-    };
-
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        if (document.body.className.includes("dark")) {
-            document.body.classList.remove('dark');
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            document.body.classList.add('dark');
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
-
-</script>
-<script>
-    document.querySelectorAll('pre > code').forEach((codeblock) => {
-        const container = codeblock.parentNode.parentNode;
-
-        const copybutton = document.createElement('button');
-        copybutton.classList.add('copy-code');
-        copybutton.innerHTML = 'copy';
-
-        function copyingDone() {
-            copybutton.innerHTML = 'copied!';
-            setTimeout(() => {
-                copybutton.innerHTML = 'copy';
-            }, 2000);
-        }
-
-        copybutton.addEventListener('click', (cb) => {
-            if ('clipboard' in navigator) {
-                navigator.clipboard.writeText(codeblock.textContent);
-                copyingDone();
-                return;
-            }
-
-            const range = document.createRange();
-            range.selectNodeContents(codeblock);
-            const selection = window.getSelection();
-            selection.removeAllRanges();
-            selection.addRange(range);
-            try {
-                document.execCommand('copy');
-                copyingDone();
-            } catch (e) { };
-            selection.removeRange(range);
-        });
-
-        if (container.classList.contains("highlight")) {
-            container.appendChild(copybutton);
-        } else if (container.parentNode.firstChild == container) {
-            
-        } else if (codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName == "TABLE") {
-            
-            codeblock.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(copybutton);
-        } else {
-            
-            codeblock.parentNode.appendChild(copybutton);
-        }
-    });
-</script>
-</body>
-
-</html>
+&nbsp;|&nbsp;标签: &nbsp;<ul class=post-tags-meta><a href=https://wangwangbu.com/tags/wsl/>WSL</a>
+<a href=https://wangwangbu.com/tags/windows/>、Windows</a>
+<a href=https://wangwangbu.com/tags/linux/>、Linux</a></ul></div></header><aside id=toc-container class="toc-container wide"><div class=toc><details open><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><ul><li><a href=#%e5%89%8d%e7%bd%ae%e5%b7%a5%e4%bd%9c aria-label=前置工作>前置工作</a></li><li><a href=#%e5%ae%89%e8%a3%85 aria-label=安装>安装</a></li><li><a href=#%e6%9b%b4%e6%8d%a2-apt-%e6%ba%90 aria-label="更换 apt 源">更换 apt 源</a></li><li><a href=#%e9%97%ae%e9%a2%98 aria-label=问题>问题</a><ul><li><a href=#%e6%9b%b4%e6%96%b0%e6%ba%90%e4%b8%8d%e6%88%90%e5%8a%9f aria-label=更新源不成功>更新源不成功</a></li></ul></li></ul></div></details></div></aside><script>let activeElement,elements;window.addEventListener("DOMContentLoaded",function(){checkTocPosition(),elements=document.querySelectorAll("h1[id],h2[id],h3[id],h4[id],h5[id],h6[id]"),activeElement=elements[0];const t=encodeURI(activeElement.getAttribute("id")).toLowerCase();document.querySelector(`.inner ul li a[href="#${t}"]`).classList.add("active")},!1),window.addEventListener("resize",function(){checkTocPosition()},!1),window.addEventListener("scroll",()=>{activeElement=Array.from(elements).find(e=>{if(getOffsetTop(e)-window.pageYOffset>0&&getOffsetTop(e)-window.pageYOffset<window.innerHeight/2)return e})||activeElement,elements.forEach(e=>{const t=encodeURI(e.getAttribute("id")).toLowerCase();e===activeElement?document.querySelector(`.inner ul li a[href="#${t}"]`).classList.add("active"):document.querySelector(`.inner ul li a[href="#${t}"]`).classList.remove("active")})},!1);const main=parseInt(getComputedStyle(document.body).getPropertyValue("--article-width"),10),toc=parseInt(getComputedStyle(document.body).getPropertyValue("--toc-width"),10),gap=parseInt(getComputedStyle(document.body).getPropertyValue("--gap"),10);function checkTocPosition(){const e=document.body.scrollWidth;e-main-toc*2-gap*4>0?document.getElementById("toc-container").classList.add("wide"):document.getElementById("toc-container").classList.remove("wide")}function getOffsetTop(e){if(!e.getClientRects().length)return 0;let t=e.getBoundingClientRect(),n=e.ownerDocument.defaultView;return t.top+n.pageYOffset}</script><div class=post-content><h2 id=前置工作>前置工作<a hidden class=anchor aria-hidden=true href=#前置工作>#</a></h2><p>需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#007f7f># 开启 WSL 功能</span>
+</span></span><span style=display:flex><span>dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart
+</span></span><span style=display:flex><span><span style=color:#007f7f># 开启 Hyper-V 功能</span>
+</span></span><span style=display:flex><span>dism.exe /online /enable-feature /featurename:VirtualMachinePlatform /all /norestart
+</span></span></code></pre></td></tr></table></div></div><p>会提示设置重启生效，可以等下一步完成一起重启，接下来安装 Linux 的发行版本。</p><h2 id=安装>安装<a hidden class=anchor aria-hidden=true href=#安装>#</a></h2><p>可以在 Microsoft 商店选择喜欢的 Linux 版本，包括 Ubuntu、SUSE、Kali等，或是使用命令<code>wsl --install</code>就可完成，但一般默认装在 C 盘。</p><p>想装在其他盘可以使用下面的方法，以 Ubuntu 20.04 为例。</p><p>下载并安装 WSL 2 内核更新包：https://wslstorestorage.blob.core.windows.net/wslblob/wsl_update_x64.msi</p><p>选择或创建一个你喜欢的目录，例如<code>D:\Linux</code>，输入命令下载安装 Ubuntu 20.04。</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>Invoke-WebRequest -Uri https://wsldownload.azureedge.net/Ubuntu_2004.2020.424.0_x64.appx -OutFile Ubuntu20.04.appx -UseBasicParsing
+</span></span></code></pre></td></tr></table></div></div><p>可以看到<code>D:\Linux</code>目录下有一个<code>Ubuntu20.04.appx</code>，然后执行下面的命令：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>Rename-Item .<span style=color:#0ff;font-weight:700>\U</span>buntu20.04.appx Ubuntu.zip
+</span></span><span style=display:flex><span>Expand-Archive .<span style=color:#0ff;font-weight:700>\U</span>buntu.zip -Verbose
+</span></span></code></pre></td></tr></table></div></div><p>此时 Ubuntu 20.04 就安装完成了，重启之后在命令行输入：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#007f7f># 设置 WSL 2</span>
+</span></span><span style=display:flex><span>wsl --set-default-version <span style=color:#ff0;font-weight:700>2</span>
+</span></span></code></pre></td></tr></table></div></div><p>双击<code>D:\Linux\Ubuntu</code>目录下的<code>ubuntu2004.exe</code>即可启动 Ubuntu，一开始会安装一些包和让你设置用户名密码。有问题可以先重启尝试解决。</p><p>第一次成功启动后，在微软的“终端”应用中已经可以新建 WSL 连接。</p><h2 id=更换-apt-源>更换 apt 源<a hidden class=anchor aria-hidden=true href=#更换-apt-源>#</a></h2><p>Ubuntu 使用 apt 安装应用，因为网络问题需要给 apt 换成国内的源，如阿里云源或清华源。</p><p>首先备份一下源文件，将<code>sources.list</code>拷贝一份<code>sources.list.bak</code>：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo cp /etc/apt/sources.list /etc/apt/sources.list.bak
+</span></span></code></pre></td></tr></table></div></div><p>然后打开<code>sources.list</code>文件进行修改，使用 vim 或 nano 等编辑器都可，这里使用 vim，按<code>i</code>进入编辑模式。</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo vim /etc/apt/sources.list
+</span></span></code></pre></td></tr></table></div></div><p>打开之后添加源地址：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 4
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 5
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 6
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 7
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 8
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272"> 9
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">10
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">11
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">12
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">13
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">14
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">15
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">16
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">17
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">18
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">19
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">20
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>#添加阿里源
+</span></span><span style=display:flex><span>deb http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+</span></span><span style=display:flex><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal main restricted universe multiverse
+</span></span><span style=display:flex><span>deb http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+</span></span><span style=display:flex><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-security main restricted universe multiverse
+</span></span><span style=display:flex><span>deb http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+</span></span><span style=display:flex><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-updates main restricted universe multiverse
+</span></span><span style=display:flex><span>deb http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+</span></span><span style=display:flex><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-proposed main restricted universe multiverse
+</span></span><span style=display:flex><span>deb http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span style=display:flex><span>deb-src http://mirrors.aliyun.com/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span style=display:flex><span>#添加清华源
+</span></span><span style=display:flex><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+</span></span><span style=display:flex><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal main restricted universe multiverse
+</span></span><span style=display:flex><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+</span></span><span style=display:flex><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-updates main restricted universe multiverse
+</span></span><span style=display:flex><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span style=display:flex><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-backports main restricted universe multiverse
+</span></span><span style=display:flex><span>deb https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse
+</span></span><span style=display:flex><span># deb-src https://mirrors.tuna.tsinghua.edu.cn/ubuntu/ focal-security main restricted universe multiverse multiverse
+</span></span></code></pre></td></tr></table></div></div><p>修改完保存退出，vim 按<code>Esc</code>退出编辑模式后，输入<code>:wq</code>保存退出，nano 使用<code>Ctrl+O</code>保存<code>Ctrl+X</code>退出。</p><p>换源后更新源：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo apt-get update
+</span></span></code></pre></td></tr></table></div></div><p>更新软件，显示我有 579 个可更新，还是花了一点时间，可以用到时再更新：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo apt-get upgrade
+</span></span></code></pre></td></tr></table></div></div><h2 id=问题>问题<a hidden class=anchor aria-hidden=true href=#问题>#</a></h2><p>WSL 安装怎么可能那么顺利，还是遇到一些问题。</p><h3 id=更新源不成功>更新源不成功<a hidden class=anchor aria-hidden=true href=#更新源不成功>#</a></h3><p>在给 apt 换源后更新源会报错，可能是<code>Failed to fetch</code>的报错，也可能是证书问题<code>Certificate verification failed</code>，需要使用对应的方法解决。</p><p><strong>Fetch 失败</strong>：</p><p>一般是 DNS 服务器问题，默认 WSL 使用的本机连接 DNS 服务器，不行的话需要修改。</p><p>Ubuntu 的配置文件在<code>/etc/resolv.conf</code>（注意不是<code>resolve</code>），可以使用<code>cat /etc/resolv.conf</code>命令查看，文件头就写着“该文件自动生成，取消自动生成应该。。。”。为了我们的设置不在重启后被覆盖，就按他说的设置<code>/etc/wsl.conf</code>文件。</p><p>使用<code>vim</code>打开<code>/etc/wsl.conf</code>，在文件中添加：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>[network]
+</span></span><span style=display:flex><span>generateResolvConf=<span style=color:#fff;font-weight:700>false</span>
+</span></span></code></pre></td></tr></table></div></div><p>注意是<code>...Resolv...</code>，保存关闭。</p><p>然后就可以设置<code>/etc/resolv.conf</code>文件了：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>sudo vim /etc/resolv.conf
+</span></span></code></pre></td></tr></table></div></div><p>添加你想要的 DNS 服务器地址，例如：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-text data-lang=text><span style=display:flex><span>nameserver 8.8.8.8
+</span></span></code></pre></td></tr></table></div></div><p>也可以添加别的：阿里云<code>223.6.6.6</code>，<code>223.5.5.5</code>，腾讯<code>119.29.29.29</code>。</p><p>保存退出之后再使用更新源就行了，即使下次重启 WSL 之后配置也不会修改。</p><p>如果遇到无法保存的错误"Can&rsquo;t open linked file for writing"，此时<code>resolv.conf</code>是一个链接，尝试删除之后再用 vim 新建文件：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">3
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">4
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#007f7f># 删除文件</span>
+</span></span><span style=display:flex><span>sudo rm /etc/resolv.conf
+</span></span><span style=display:flex><span><span style=color:#007f7f># 再次编辑</span>
+</span></span><span style=display:flex><span>sudo vim /etc/resolv.conf
+</span></span></code></pre></td></tr></table></div></div><blockquote><p>参考：https://www.zhihu.com/question/421854017</p></blockquote><p><strong>证书验证失败</strong>：</p><ol><li><code>date</code>查看时间是否正确，排除时间造成的证书问题。</li><li>通过<code>sudo apt install ca-certificates --reinstall</code>无法更新安装包。</li><li>手动下载<code>ca-certificates.deb</code>文件重新安装最新版。</li></ol><p>文件从
+<a href="../https:/link.juejin.cn/?target=https%3A%2F%2Fpkgs.org%2Fdownload%2Fca-certificates" target=_blank rel=noopener>此处</a>下载，选择对应 Linux 版本，例如我是 Ubuntu 20.04 LTS (Focal Fossa)，选择一个最新版点击：</p><p><img loading=lazy src=/posts/tech/wsl/images/2023-03-01-16-26-08.png alt></p><p>网页拉到下面有一个安装地址：</p><p><img loading=lazy src=/posts/tech/wsl/images/2023-03-01-16-27-35.png alt></p><p>在 Ubuntu 终端我们进到<code>tmp</code>目录下载下来：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">2
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span><span style=color:#fff;font-weight:700>cd</span> /tmp
+</span></span><span style=display:flex><span>wget http://archive.ubuntu.com/ubuntu/pool/main/c/ca-certificates/ca-certificates_20211016ubuntu0.20.04.1_all.deb
+</span></span></code></pre></td></tr></table></div></div><p>如果提示以下错误，可以先尝试配置 DNS 服务器，见上一条<strong>Fetch 失败</strong>的方法，然后使用<code>apt</code>安装：<code>sudo apt install ca-certificates --reinstall</code></p><p>如果成功下载下来，使用<code>dpkg</code>命令安装：</p><div class=highlight><div style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><table style=border-spacing:0;padding:0;margin:0;border:0><tr><td style=vertical-align:top;padding:0;margin:0;border:0><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code><span style="white-space:pre;user-select:none;margin-right:.4em;padding:0 .4em;color:#727272">1
+</span></code></pre></td><td style=vertical-align:top;padding:0;margin:0;border:0;width:100%><pre tabindex=0 style=color:#e5e5e5;background-color:#000;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-shell data-lang=shell><span style=display:flex><span>dpkg -i ./ca-certificates_20211016ubuntu0.20.04.1_all.deb
+</span></span></code></pre></td></tr></table></div></div><p>再使用<code>sudo apt-get update</code>试试。</p><blockquote><p>参考：https://juejin.cn/post/7033412379727626247</p></blockquote></div><footer class=post-footer><ul class=post-tags><li><a href=https://wangwangbu.com/tags/wsl/>WSL</a></li><li><a href=https://wangwangbu.com/tags/windows/>Windows</a></li><li><a href=https://wangwangbu.com/tags/linux/>Linux</a></li></ul></footer></article></main><footer class=footer><span>&copy; 2023 <a href=https://wangwangbu.com/>往往不的攻略笔记</a></span>
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg></a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
