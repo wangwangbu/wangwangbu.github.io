@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>Tags on 往往不的攻略笔记</title>
+    <link>https://wangwangbu.com/tags/</link>
+    <description>Recent content in Tags on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>terminal</title>
+      <link>https://wangwangbu.com/tags/terminal/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/terminal/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode</title>
+      <link>https://wangwangbu.com/tags/vscode/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/vscode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Windows</title>
+      <link>https://wangwangbu.com/tags/windows/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux</title>
+      <link>https://wangwangbu.com/tags/linux/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>WSL</title>
+      <link>https://wangwangbu.com/tags/wsl/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/wsl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>https://wangwangbu.com/tags/cmake/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/cmake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://wangwangbu.com/tags/python/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>DFS</title>
+      <link>https://wangwangbu.com/tags/dfs/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/dfs/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Leetcode</title>
+      <link>https://wangwangbu.com/tags/leetcode/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/leetcode/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>状态压缩</title>
+      <link>https://wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</link>
+      <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode Extension</title>
+      <link>https://wangwangbu.com/tags/vscode-extension/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://wangwangbu.com/tags/vscode-extension/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
