@@ -9,10 +9,10 @@
     <lastBuildDate>Sun, 22 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/dfs/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Leetcode 456 我能赢么</title>
-      <link>https://www.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</link>
+      <link>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-465/</link>
       <pubDate>Sun, 22 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</guid>
+      <guid>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-465/</guid>
       <description>题目链接： https://leetcode.cn/problems/can-i-win/ 思路 对于任一玩家，有两种情况： 在当前可选集合中选择i，选择后满足大于等于desiredTotal，则该玩家赢。 不满足 1. 的情况下，</description>
     </item>
     

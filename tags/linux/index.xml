@@ -13,7 +13,7 @@
       <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</guid>
-      <description>前置工作 需要先启动 Windows 上 WSL的相关服务：以管理员身份启动 PowerShell，输入以下命令： 1 2 3 4 # 开启 WSL 功能 dism.exe /online /enable-feature /featurename:Microsoft-Windows-Subsystem-Linux /all /norestart # 开启 Hyper-V 功能 dism.exe /online</description>
+      <description>记录一下 Win10 安装 WSL 2 Ubuntu 20.04 的流程和遇见的问题，在两台设备下都安装了一次，遇到的问题应该比较全面了。</description>
     </item>
     
   </channel>

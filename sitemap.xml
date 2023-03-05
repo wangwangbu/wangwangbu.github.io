@@ -2,10 +2,10 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://www.wangwangbu.com/type/blog/</loc>
+    <loc>https://www.wangwangbu.com/posts/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/posts/</loc>
+    <loc>https://www.wangwangbu.com/type/blog/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/tags/</loc>
@@ -59,13 +59,13 @@
     <loc>https://www.wangwangbu.com/tags/leetcode/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/posts/algorithm/leetcode/b-leetcode-465/</loc>
-    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.wangwangbu.com/posts/algorithm/</loc>
+    <loc>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-465/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.wangwangbu.com/posts/algo/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/series/</loc>
