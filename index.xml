@@ -79,5 +79,25 @@
       <description>介绍 VS Code 允许用户自定义代码段，通过自定义指令快速创建代码块。（ 官方文档） 代码块分两种： 全局代码块（在snippets目录下生成后缀名为.co</description>
     </item>
     
+    
+    
+    <item>
+      <title>🙋🏻‍♂️关于</title>
+      <link>https://www.wangwangbu.com/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/about/</guid>
+      <description>往往不</description>
+    </item>
+    
+    <item>
+      <title>🚘转生</title>
+      <link>https://www.wangwangbu.com/links/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/links/</guid>
+      <description>准备从往往不实体中断开，请在下方选择想要转生的数据源。 将安排专车🚘在 5s 内到达，请及时走到马路中央，感谢使用转生服务🙂</description>
+    </item>
+    
   </channel>
 </rss>
