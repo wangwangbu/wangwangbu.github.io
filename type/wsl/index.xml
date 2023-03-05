@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>WSL on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/type/wsl/</link>
+    <description>Recent content in WSL on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 01 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/wsl/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WSL 2 的安装与配置</title>
+      <link>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</link>
+      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</guid>
+      <description>记录一下 Win10 安装 WSL 2 Ubuntu 20.04 的流程和遇见的问题，在两台设备下都安装了一次，遇到的问题应该比较全面了。</description>
+    </item>
+    
+  </channel>
+</rss>

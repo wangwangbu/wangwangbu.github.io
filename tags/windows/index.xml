@@ -16,14 +16,5 @@
       <description>想法 VSCode 的终端会调用电脑装好的 shell，例如 cmd 和 Win10 自带的 PowerShell，想要美化就得从 shell 入手。关于这个 Win10 下有两套方案： 使用zsh。安装</description>
     </item>
     
-    <item>
-      <title>WSL 2 的安装与配置</title>
-      <link>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</link>
-      <pubDate>Wed, 01 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</guid>
-      <description>记录一下 Win10 安装 WSL 2 Ubuntu 20.04 的流程和遇见的问题，在两台设备下都安装了一次，遇到的问题应该比较全面了。</description>
-    </item>
-    
   </channel>
 </rss>

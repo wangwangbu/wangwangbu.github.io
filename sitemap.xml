@@ -5,19 +5,10 @@
     <loc>https://www.wangwangbu.com/posts/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/type/blog/</loc>
-    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.wangwangbu.com/tags/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/tags/terminal/</loc>
-    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>https://www.wangwangbu.com/type/</loc>
-    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.wangwangbu.com/tags/vscode/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-terminal/b-vscode-terminal/</loc>
@@ -26,13 +17,22 @@
     <loc>https://www.wangwangbu.com/tags/windows/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.wangwangbu.com/type/%E5%B7%A5%E5%85%B7/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.wangwangbu.com/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/posts/tech/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.wangwangbu.com/tags/%E7%BB%88%E7%AB%AF/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.wangwangbu.com/tags/linux/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.wangwangbu.com/type/wsl/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/tags/wsl/</loc>
@@ -41,10 +41,19 @@
     <loc>https://www.wangwangbu.com/posts/tech/wsl/b-wsl/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.wangwangbu.com/tags/c&#43;&#43;/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.wangwangbu.com/tags/cmake/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.wangwangbu.com/type/vscode/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/tags/python/</loc>
@@ -65,25 +74,31 @@
     <loc>https://www.wangwangbu.com/tags/%E7%8A%B6%E6%80%81%E5%8E%8B%E7%BC%A9/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>https://www.wangwangbu.com/type/%E7%AE%97%E6%B3%95/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>https://www.wangwangbu.com/posts/algo/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/series/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/tags/vscode-extension/</loc>
-    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>https://www.wangwangbu.com/series/vscode-extension/</loc>
+    <loc>https://www.wangwangbu.com/series/vscode-%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</loc>
+    <loc>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</loc>
+    <lastmod>2023-03-03T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>https://www.wangwangbu.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</loc>
     <lastmod>2023-03-03T00:00:00+00:00</lastmod>
   </url><url>
     <loc>https://www.wangwangbu.com/archives/</loc>

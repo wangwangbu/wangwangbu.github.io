@@ -31,7 +31,7 @@
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
-      <description>前言 之前在VS Code上配置了C++编译运行的环境，详见[[I-VSCode-C++]]，但是这只针对单文件，虽然能够通过修改设置达到编译多</description>
+      <description>记录一下 VSCode 上 CMake 插件的环境配置，正好学习一下 CMake 的使用。</description>
     </item>
     
     <item>
@@ -53,21 +53,12 @@
     </item>
     
     <item>
-      <title>VSCode Extension (2) 插件能力</title>
+      <title>VSCode 插件开发 (2) 插件能力</title>
       <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
-      <description>创建指令 开发者可以为动作指定指令，通过两步操作： 在package.json的contributes.commands定义命令。 在主要文件中使</description>
-    </item>
-    
-    <item>
-      <title>VSCode Extension (1) 安装和运行</title>
-      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
-      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
-      <description>前言 上来先放VS Code插件开发的 官方文档，说实话非常详细，没必要再看其他教程。 该系列文章只是作为我学习的记录，也可在一些问题上给大家提供思</description>
+      <description>VSCode 插件开发学习记录系列，希望从零开发一款自己需要的插件。第二节，记录官方提供的插件接口，探索插件能力，拜托不要断更啊~</description>
     </item>
     
     <item>
@@ -77,6 +68,15 @@
       
       <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
       <description>介绍 VS Code 允许用户自定义代码段，通过自定义指令快速创建代码块。（ 官方文档） 代码块分两种： 全局代码块（在snippets目录下生成后缀名为.co</description>
+    </item>
+    
+    <item>
+      <title>VSCode 插件开发 (1) 安装和运行</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
+      <description>VSCode插件开发学习记录系列，希望从零开发一款自己需要的插件。第一节，记录开发环境配置和第一个应用的运行，拜托不要断更啊~</description>
     </item>
     
     

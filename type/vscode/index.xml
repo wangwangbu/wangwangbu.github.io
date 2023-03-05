@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>VSCode on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/type/vscode/</link>
+    <description>Recent content in VSCode on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 06 Aug 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/vscode/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode CMake 环境配置与使用</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
+      <description>记录一下 VSCode 上 CMake 插件的环境配置，正好学习一下 CMake 的使用。</description>
+    </item>
+    
+    <item>
+      <title>VSCode Python 环境配置</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</link>
+      <pubDate>Mon, 06 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-python/b-vscode-python/</guid>
+      <description>正常来说不涉及AI的Python代码编写，只需要在 Python官网中下载安装Python，在VS Code中安装Python插件，就能愉快地开</description>
+    </item>
+    
+    <item>
+      <title>VSCode 插件开发 (2) 插件能力</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
+      <description>VSCode 插件开发学习记录系列，希望从零开发一款自己需要的插件。第二节，记录官方提供的插件接口，探索插件能力，拜托不要断更啊~</description>
+    </item>
+    
+    <item>
+      <title>VSCode Snippets 使用</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-snippets/b-vscode-snippets/</guid>
+      <description>介绍 VS Code 允许用户自定义代码段，通过自定义指令快速创建代码块。（ 官方文档） 代码块分两种： 全局代码块（在snippets目录下生成后缀名为.co</description>
+    </item>
+    
+    <item>
+      <title>VSCode 插件开发 (1) 安装和运行</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
+      <description>VSCode插件开发学习记录系列，希望从零开发一款自己需要的插件。第一节，记录开发环境配置和第一个应用的运行，拜托不要断更啊~</description>
+    </item>
+    
+  </channel>
+</rss>

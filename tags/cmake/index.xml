@@ -13,7 +13,7 @@
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/posts/tech/vscode-configuration/vscode-cmake/b-vscode-cmake/</guid>
-      <description>前言 之前在VS Code上配置了C++编译运行的环境，详见[[I-VSCode-C++]]，但是这只针对单文件，虽然能够通过修改设置达到编译多</description>
+      <description>记录一下 VSCode 上 CMake 插件的环境配置，正好学习一下 CMake 的使用。</description>
     </item>
     
   </channel>

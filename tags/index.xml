@@ -8,29 +8,20 @@
     <language>zh-cn</language>
     <lastBuildDate>Thu, 02 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>terminal</title>
-      <link>https://www.wangwangbu.com/tags/terminal/</link>
-      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/tags/terminal/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>VSCode</title>
-      <link>https://www.wangwangbu.com/tags/vscode/</link>
-      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/tags/vscode/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Windows</title>
       <link>https://www.wangwangbu.com/tags/windows/</link>
       <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/tags/windows/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>终端</title>
+      <link>https://www.wangwangbu.com/tags/%E7%BB%88%E7%AB%AF/</link>
+      <pubDate>Thu, 02 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/%E7%BB%88%E7%AB%AF/</guid>
       <description></description>
     </item>
     
@@ -53,11 +44,29 @@
     </item>
     
     <item>
+      <title>C&#43;&#43;</title>
+      <link>https://www.wangwangbu.com/tags/c&#43;&#43;/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/c&#43;&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>CMake</title>
       <link>https://www.wangwangbu.com/tags/cmake/</link>
       <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/tags/cmake/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>VSCode插件</title>
+      <link>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6/</link>
+      <pubDate>Sat, 06 Aug 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6/</guid>
       <description></description>
     </item>
     
@@ -98,11 +107,20 @@
     </item>
     
     <item>
-      <title>VSCode Extension</title>
-      <link>https://www.wangwangbu.com/tags/vscode-extension/</link>
+      <title>VSCode插件开发</title>
+      <link>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
       <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/tags/vscode-extension/</guid>
+      <guid>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>学习记录</title>
+      <link>https://www.wangwangbu.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/</guid>
       <description></description>
     </item>
     

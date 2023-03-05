@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>VSCode插件开发 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/</link>
+    <description>Recent content in VSCode插件开发 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Sat, 21 May 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/vscode%E6%8F%92%E4%BB%B6%E5%BC%80%E5%8F%91/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>VSCode 插件开发 (2) 插件能力</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</link>
+      <pubDate>Sat, 21 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-2/</guid>
+      <description>VSCode 插件开发学习记录系列，希望从零开发一款自己需要的插件。第二节，记录官方提供的插件接口，探索插件能力，拜托不要断更啊~</description>
+    </item>
+    
+    <item>
+      <title>VSCode 插件开发 (1) 安装和运行</title>
+      <link>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</link>
+      <pubDate>Fri, 20 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/vscode-extension/b-vscode-extension-1/</guid>
+      <description>VSCode插件开发学习记录系列，希望从零开发一款自己需要的插件。第一节，记录开发环境配置和第一个应用的运行，拜托不要断更啊~</description>
+    </item>
+    
+  </channel>
+</rss>
