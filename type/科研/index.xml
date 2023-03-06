@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>科研 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/type/%E7%A7%91%E7%A0%94/</link>
+    <description>Recent content in 科研 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%A7%91%E7%A0%94/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Differential Privacy</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</guid>
+      <description>Difference privacy is a technique for resisting the adversary inferring the information of database though the change. Laplace distribution is a popular noise added to the database for insuring DP.</description>
+    </item>
+    
+    <item>
+      <title>k-d tree</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-kd-tree/</link>
+      <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-kd-tree/</guid>
+      <description>Definition In computer science, a k-d tree (short for k-dimensional tree) is a space-partitioning data structure for organizing points in a k-dimensional space. (Wiki) References 知乎 k-d tree原理详解</description>
+    </item>
+    
+  </channel>
+</rss>

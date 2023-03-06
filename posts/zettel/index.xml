@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>奇怪的知识 ➕ on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/posts/zettel/</link>
+    <description>Recent content in 奇怪的知识 ➕ on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Dendron</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-dendron/</link>
+      <pubDate>Mon, 06 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-dendron/</guid>
+      <description>Dendron 是一个开源的、本地优先的、基于 Markdown 的笔记工具，它是专为开发人员构建的个人知识管理解决方案（PKM），可以与 VS Code 和 VSCodium 等 IDE 原生集成。 和 Foam 的主要区</description>
+    </item>
+    
+    <item>
+      <title>Go Module</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-go-module/</link>
+      <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-go-module/</guid>
+      <description>GOPATH 是老版本的包管理模式，之后是 Go Vendor，Go Module 是新的方式。Go Vendor 是将所有包放在 vendor 目录下，Go Module 会将依赖安装在GOPATH/pkg/mo</description>
+    </item>
+    
+    <item>
+      <title>Differential Privacy</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</link>
+      <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</guid>
+      <description>Difference privacy is a technique for resisting the adversary inferring the information of database though the change. Laplace distribution is a popular noise added to the database for insuring DP.</description>
+    </item>
+    
+    <item>
+      <title>k-d tree</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-kd-tree/</link>
+      <pubDate>Fri, 03 Jun 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-kd-tree/</guid>
+      <description>Definition In computer science, a k-d tree (short for k-dimensional tree) is a space-partitioning data structure for organizing points in a k-dimensional space. (Wiki) References 知乎 k-d tree原理详解</description>
+    </item>
+    
+    <item>
+      <title>CMake</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-cmake/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-cmake/</guid>
+      <description>CMake是一种跨平台编译工具，先编写CMakeLists.txt文件，然后使用cmake命令来生成对应的makefile文件，最后使用ma</description>
+    </item>
+    
+  </channel>
+</rss>

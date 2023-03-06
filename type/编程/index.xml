@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>编程 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/</link>
+    <description>Recent content in 编程 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go Module</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-go-module/</link>
+      <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-go-module/</guid>
+      <description>GOPATH 是老版本的包管理模式，之后是 Go Vendor，Go Module 是新的方式。Go Vendor 是将所有包放在 vendor 目录下，Go Module 会将依赖安装在GOPATH/pkg/mo</description>
+    </item>
+    
+  </channel>
+</rss>

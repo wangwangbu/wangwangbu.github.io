@@ -16,5 +16,14 @@
       <description>记录一下 VSCode 上 CMake 插件的环境配置，正好学习一下 CMake 的使用。</description>
     </item>
     
+    <item>
+      <title>CMake</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-cmake/</link>
+      <pubDate>Mon, 23 May 2022 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-cmake/</guid>
+      <description>CMake是一种跨平台编译工具，先编写CMakeLists.txt文件，然后使用cmake命令来生成对应的makefile文件，最后使用ma</description>
+    </item>
+    
   </channel>
 </rss>
