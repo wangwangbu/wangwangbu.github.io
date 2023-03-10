@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>protobuf on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/protobuf/</link>
+    <description>Recent content in protobuf on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/protobuf/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Protocol Buffers</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-protobuf/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-protobuf/</guid>
+      <description>Protocol Buffers（protobuf）是一种以二进制方式存储的结构化数据存储格式，占用空间小，可读性差，多用于 RPC 数据格式。在.proto文件中</description>
+    </item>
+    
+  </channel>
+</rss>

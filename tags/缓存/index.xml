@@ -1,21 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>编程 on 往往不的攻略笔记</title>
-    <link>https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/</link>
-    <description>Recent content in 编程 on 往往不的攻略笔记</description>
+    <title>缓存 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98/</link>
+    <description>Recent content in 缓存 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Protocol Buffers</title>
-      <link>https://www.wangwangbu.com/posts/zettel/z-protobuf/</link>
-      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/posts/zettel/z-protobuf/</guid>
-      <description>Protocol Buffers（protobuf）是一种以二进制方式存储的结构化数据存储格式，占用空间小，可读性差，多用于 RPC 数据格式。在.proto文件中</description>
-    </item>
-    
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>一致性哈希</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/</link>
@@ -35,12 +26,12 @@
     </item>
     
     <item>
-      <title>Go Module</title>
-      <link>https://www.wangwangbu.com/posts/zettel/z-go-module/</link>
-      <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
+      <title>缓存淘汰策略</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/posts/zettel/z-go-module/</guid>
-      <description>GOPATH 是老版本的包管理模式，之后是 Go Vendor，Go Module 是新的方式。Go Vendor 是将所有包放在 vendor 目录下，Go Module 会将依赖安装在GOPATH/pkg/mo</description>
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</guid>
+      <description>FIFO (First In First Out): 先进先出，淘汰缓存中最早添加的，用队列可以实现。 LFU (Least Frequently Used): 最少使用，淘汰缓存中访问频率最低的，维护一个按访问次数排序的队列。 缺点是受</description>
     </item>
     
   </channel>

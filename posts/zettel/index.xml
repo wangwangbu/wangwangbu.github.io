@@ -6,7 +6,43 @@
     <description>Recent content in 奇怪的知识 ➕ on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Protocol Buffers</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-protobuf/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-protobuf/</guid>
+      <description>Protocol Buffers（protobuf）是一种以二进制方式存储的结构化数据存储格式，占用空间小，可读性差，多用于 RPC 数据格式。在.proto文件中</description>
+    </item>
+    
+    <item>
+      <title>一致性哈希</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/</guid>
+      <description>对于给定的 key，使用哈希值确定获取资源的节点，防止不同节点重复缓存同一资源。一致性哈希将 key 和节点都映射到 2^32 的环形空间，使用顺时针找到的第一</description>
+    </item>
+    
+    <item>
+      <title>缓存问题</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
+      <description>缓存雪崩：缓存在同一时刻全部失效，造成瞬时 DB 请求量大、压力骤增，引起雪崩。缓存雪崩通常因为缓存服务器宕机、缓存的 key 设置了相同的过期时间等引起</description>
+    </item>
+    
+    <item>
+      <title>缓存淘汰策略</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</guid>
+      <description>FIFO (First In First Out): 先进先出，淘汰缓存中最早添加的，用队列可以实现。 LFU (Least Frequently Used): 最少使用，淘汰缓存中访问频率最低的，维护一个按访问次数排序的队列。 缺点是受</description>
+    </item>
+    
     <item>
       <title>Dendron</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-dendron/</link>

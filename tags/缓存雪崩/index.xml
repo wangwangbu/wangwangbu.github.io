@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>缓存雪崩 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/</link>
+    <description>Recent content in 缓存雪崩 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98%E9%9B%AA%E5%B4%A9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>缓存问题</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</link>
+      <pubDate>Thu, 09 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
+      <description>缓存雪崩：缓存在同一时刻全部失效，造成瞬时 DB 请求量大、压力骤增，引起雪崩。缓存雪崩通常因为缓存服务器宕机、缓存的 key 设置了相同的过期时间等引起</description>
+    </item>
+    
+  </channel>
+</rss>

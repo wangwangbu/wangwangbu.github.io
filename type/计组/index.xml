@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>计组 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/type/%E8%AE%A1%E7%BB%84/</link>
+    <description>Recent content in 计组 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 07 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E8%AE%A1%E7%BB%84/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>缓存淘汰策略</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</guid>
+      <description>FIFO (First In First Out): 先进先出，淘汰缓存中最早添加的，用队列可以实现。 LFU (Least Frequently Used): 最少使用，淘汰缓存中访问频率最低的，维护一个按访问次数排序的队列。 缺点是受</description>
+    </item>
+    
+  </channel>
+</rss>
