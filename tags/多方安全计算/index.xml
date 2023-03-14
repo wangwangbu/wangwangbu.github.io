@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>多方安全计算 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E5%A4%9A%E6%96%B9%E5%AE%89%E5%85%A8%E8%AE%A1%E7%AE%97/</link>
+    <description>Recent content in 多方安全计算 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E5%A4%9A%E6%96%B9%E5%AE%89%E5%85%A8%E8%AE%A1%E7%AE%97/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>z-同态加密</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</guid>
+      <description>同态加密（Homomorphic Encryption, HE）是在密文上通过计算获取期望的明文计算结果。 半同态：只支持密文上的加法或乘法操作。 全同态：既支持密文上</description>
+    </item>
+    
+    <item>
+      <title>不经意传输</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-oblivious-transfer/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-oblivious-transfer/</guid>
+      <description>不经意传输（Oblivious Transfer, OT）使得服务发送方和服务接收方以不经意的方式交互信息。 基于 RSA 实现： 发送者生成两个 RSA 公私钥对发给 B; B 生成随机</description>
+    </item>
+    
+    <item>
+      <title>混淆电路</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</guid>
+      <description>混淆电路（Garbled Circuit, GC）解决各自持有隐私数据，在不泄露自己数据的前提下共同计算结果。主要是对输入线的不同可能生成不同的 key 来混合加密真</description>
+    </item>
+    
+    <item>
+      <title>秘密共享</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</guid>
+      <description>秘密共享（Secret Sharing, SS）将一个数字拆成多个数，并发给多个参与方，一个或少数几个无法还原数据。 任意 t 个参与方可得明文，任意不多于 t-1 个参与</description>
+    </item>
+    
+  </channel>
+</rss>

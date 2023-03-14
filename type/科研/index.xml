@@ -6,14 +6,68 @@
     <description>Recent content in 科研 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 28 Sep 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%A7%91%E7%A0%94/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%A7%91%E7%A0%94/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Differential Privacy</title>
+      <title>通用数据保护条例</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-gdpr/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-gdpr/</guid>
+      <description>欧盟通用保护条例 General Data Protection Regulation 简称 GDPR，于 2018 年 5 月 25 日正式实施。 个人数据指任何用来识别活着的人/自然人的数据（例如姓名、邮箱、IP、网络 ID）</description>
+    </item>
+    
+    <item>
+      <title>z-同态加密</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</guid>
+      <description>同态加密（Homomorphic Encryption, HE）是在密文上通过计算获取期望的明文计算结果。 半同态：只支持密文上的加法或乘法操作。 全同态：既支持密文上</description>
+    </item>
+    
+    <item>
+      <title>不经意传输</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-oblivious-transfer/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-oblivious-transfer/</guid>
+      <description>不经意传输（Oblivious Transfer, OT）使得服务发送方和服务接收方以不经意的方式交互信息。 基于 RSA 实现： 发送者生成两个 RSA 公私钥对发给 B; B 生成随机</description>
+    </item>
+    
+    <item>
+      <title>混淆电路</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</guid>
+      <description>混淆电路（Garbled Circuit, GC）解决各自持有隐私数据，在不泄露自己数据的前提下共同计算结果。主要是对输入线的不同可能生成不同的 key 来混合加密真</description>
+    </item>
+    
+    <item>
+      <title>秘密共享</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</guid>
+      <description>秘密共享（Secret Sharing, SS）将一个数字拆成多个数，并发给多个参与方，一个或少数几个无法还原数据。 任意 t 个参与方可得明文，任意不多于 t-1 个参与</description>
+    </item>
+    
+    <item>
+      <title>零知识证明</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-zero-knowledge-proof/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-zero-knowledge-proof/</guid>
+      <description>零知识证明（Zero-Knowledge Proof, ZKP）解决的问题是在不提供答案的基础上向另一方证明自己知道答案。可用于区块链证明交易合规，MPC</description>
+    </item>
+    
+    <item>
+      <title>差分隐私</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</link>
       <pubDate>Wed, 28 Sep 2022 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/posts/zettel/z-differential-privacy/</guid>
-      <description>Difference privacy is a technique for resisting the adversary inferring the information of database though the change. Laplace distribution is a popular noise added to the database for insuring DP.</description>
+      <description>差分隐私（Differential Privacy, DP）保护数据源的改动导致的隐私泄露问题。 对于一个随机化算法$F$，两个相邻数据集$D$和$D^\pri</description>
     </item>
     
     <item>

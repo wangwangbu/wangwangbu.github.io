@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>隐私保护条例 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%9D%A1%E4%BE%8B/</link>
+    <description>Recent content in 隐私保护条例 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E9%9A%90%E7%A7%81%E4%BF%9D%E6%8A%A4%E6%9D%A1%E4%BE%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>通用数据保护条例</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-gdpr/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-gdpr/</guid>
+      <description>欧盟通用保护条例 General Data Protection Regulation 简称 GDPR，于 2018 年 5 月 25 日正式实施。 个人数据指任何用来识别活着的人/自然人的数据（例如姓名、邮箱、IP、网络 ID）</description>
+    </item>
+    
+  </channel>
+</rss>

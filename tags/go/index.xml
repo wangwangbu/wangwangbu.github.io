@@ -6,7 +6,16 @@
     <description>Recent content in Go on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 21 Feb 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Linux 下 Go 安装与设置</title>
+      <link>https://www.wangwangbu.com/posts/tech/linux-config/linux-go/b-linux-go/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/linux-config/linux-go/b-linux-go/</guid>
+      <description>记录 Linux 下 Go 的安装与环境变量设置</description>
+    </item>
+    
     <item>
       <title>Go Module</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-go-module/</link>

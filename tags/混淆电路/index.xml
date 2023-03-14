@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>混淆电路 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E6%B7%B7%E6%B7%86%E7%94%B5%E8%B7%AF/</link>
+    <description>Recent content in 混淆电路 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E6%B7%B7%E6%B7%86%E7%94%B5%E8%B7%AF/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>混淆电路</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-garbled-circuit/</guid>
+      <description>混淆电路（Garbled Circuit, GC）解决各自持有隐私数据，在不泄露自己数据的前提下共同计算结果。主要是对输入线的不同可能生成不同的 key 来混合加密真</description>
+    </item>
+    
+  </channel>
+</rss>

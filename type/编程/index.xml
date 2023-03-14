@@ -6,7 +6,34 @@
     <description>Recent content in 编程 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E7%BC%96%E7%A8%8B/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 标准库：container/list</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-go-list/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-go-list/</guid>
+      <description>container/list 文档： https://pkg.go.dev/container/list list 是一个双向链表，其中每个元素是 Element 类型： 1 2 3 type Element struct { Value interface{} } 可用(*Element)Next方法和(*Element)Prev方法</description>
+    </item>
+    
+    <item>
+      <title>Memcached 和 Groupcache</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-memcached%E5%92%8Cgroupcache/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-memcached%E5%92%8Cgroupcache/</guid>
+      <description>Memcached 是一套分布式高速缓存系统，是基于内存的 key-value 存储。Groupcache 是同一作者开发的 Go 语言版本。 Memcached 的优点： 协议简单 基于 libevent 事件处理（libev</description>
+    </item>
+    
+    <item>
+      <title>ORM</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-orm/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-orm/</guid>
+      <description>对象关系映射（Object Relational Mapping，简称ORM）是通过使用描述对象和数据库之间映射的元数据，将面向对象语言程序中的对象自动持久化到关</description>
+    </item>
+    
     <item>
       <title>Protocol Buffers</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-protobuf/</link>
@@ -32,6 +59,15 @@
       
       <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E9%97%AE%E9%A2%98/</guid>
       <description>缓存雪崩：缓存在同一时刻全部失效，造成瞬时 DB 请求量大、压力骤增，引起雪崩。缓存雪崩通常因为缓存服务器宕机、缓存的 key 设置了相同的过期时间等引起</description>
+    </item>
+    
+    <item>
+      <title>缓存淘汰策略</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</link>
+      <pubDate>Tue, 07 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-%E7%BC%93%E5%AD%98%E6%B7%98%E6%B1%B0%E7%AD%96%E7%95%A5/</guid>
+      <description>FIFO (First In First Out): 先进先出，淘汰缓存中最早添加的，用队列可以实现。 LFU (Least Frequently Used): 最少使用，淘汰缓存中访问频率最低的，维护一个按访问次数排序的队列。 缺点是受</description>
     </item>
     
     <item>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>秘密共享 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E7%A7%98%E5%AF%86%E5%85%B1%E4%BA%AB/</link>
+    <description>Recent content in 秘密共享 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%A7%98%E5%AF%86%E5%85%B1%E4%BA%AB/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>秘密共享</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-secret-sharing/</guid>
+      <description>秘密共享（Secret Sharing, SS）将一个数字拆成多个数，并发给多个参与方，一个或少数几个无法还原数据。 任意 t 个参与方可得明文，任意不多于 t-1 个参与</description>
+    </item>
+    
+  </channel>
+</rss>

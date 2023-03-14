@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>同态加密 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/</link>
+    <description>Recent content in 同态加密 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Mon, 13 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E5%90%8C%E6%80%81%E5%8A%A0%E5%AF%86/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>z-同态加密</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</link>
+      <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-homomorphic-encryption/</guid>
+      <description>同态加密（Homomorphic Encryption, HE）是在密文上通过计算获取期望的明文计算结果。 半同态：只支持密文上的加法或乘法操作。 全同态：既支持密文上</description>
+    </item>
+    
+  </channel>
+</rss>

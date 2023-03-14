@@ -6,7 +6,16 @@
     <description>Recent content in 工具 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 06 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/type/%E5%B7%A5%E5%85%B7/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SQLite</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-sqlite/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-sqlite/</guid>
+      <description>SQLite 是一款轻量级的，遵守 ACID 事务原则的关系型数据库，可以直接嵌入到代码中，不需要启动额外的服务，SQLite 将数据存储在单一的磁盘文件中。 Linux 安装</description>
+    </item>
+    
     <item>
       <title>Dendron</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-dendron/</link>

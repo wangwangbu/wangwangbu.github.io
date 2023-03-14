@@ -6,7 +6,16 @@
     <description>Recent content in 缓存 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E7%BC%93%E5%AD%98/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memcached 和 Groupcache</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-memcached%E5%92%8Cgroupcache/</link>
+      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-memcached%E5%92%8Cgroupcache/</guid>
+      <description>Memcached 是一套分布式高速缓存系统，是基于内存的 key-value 存储。Groupcache 是同一作者开发的 Go 语言版本。 Memcached 的优点： 协议简单 基于 libevent 事件处理（libev</description>
+    </item>
+    
     <item>
       <title>一致性哈希</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/</link>
