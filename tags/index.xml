@@ -6,13 +6,22 @@
     <description>Recent content in Tags on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Go 标准库</title>
-      <link>https://www.wangwangbu.com/tags/go-%E6%A0%87%E5%87%86%E5%BA%93/</link>
-      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      <title>container</title>
+      <link>https://www.wangwangbu.com/tags/container/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/tags/go-%E6%A0%87%E5%87%86%E5%BA%93/</guid>
+      <guid>https://www.wangwangbu.com/tags/container/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Go</title>
+      <link>https://www.wangwangbu.com/tags/go/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/go/</guid>
       <description></description>
     </item>
     
@@ -94,15 +103,6 @@
       <pubDate>Mon, 13 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/tags/%E9%9B%B6%E7%9F%A5%E8%AF%86%E8%AF%81%E6%98%8E/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://www.wangwangbu.com/tags/go/</link>
-      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/tags/go/</guid>
       <description></description>
     </item>
     

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>Go on 往往不的攻略笔记</title>
-    <link>https://www.wangwangbu.com/tags/go/</link>
-    <description>Recent content in Go on 往往不的攻略笔记</description>
+    <title>container on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/container/</link>
+    <description>Recent content in container on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Go 标准库：container/heap</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-go-heap/</link>
@@ -23,24 +23,6 @@
       
       <guid>https://www.wangwangbu.com/posts/zettel/z-go-list/</guid>
       <description>container/list 文档： https://pkg.go.dev/container/list list 是一个双向链表，其中每个元素是 Element 类型： 1 2 3 type Element struct { Value interface{} } 可用(*Element)Next方法和(*Element)Prev方法</description>
-    </item>
-    
-    <item>
-      <title>Linux 下 Go 安装与设置</title>
-      <link>https://www.wangwangbu.com/posts/tech/linux-config/linux-go/b-linux-go/</link>
-      <pubDate>Fri, 10 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/posts/tech/linux-config/linux-go/b-linux-go/</guid>
-      <description>记录 Linux 下 Go 的安装与环境变量设置</description>
-    </item>
-    
-    <item>
-      <title>Go Module</title>
-      <link>https://www.wangwangbu.com/posts/zettel/z-go-module/</link>
-      <pubDate>Tue, 21 Feb 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/posts/zettel/z-go-module/</guid>
-      <description>GOPATH 是老版本的包管理模式，之后是 Go Vendor，Go Module 是新的方式。Go Vendor 是将所有包放在 vendor 目录下，Go Module 会将依赖安装在GOPATH/pkg/mo</description>
     </item>
     
   </channel>

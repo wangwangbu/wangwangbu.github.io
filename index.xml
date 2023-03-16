@@ -6,7 +6,16 @@
     <description>Recent content on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 标准库：container/heap</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-go-heap/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-go-heap/</guid>
+      <description>container/heap 文档： https://pkg.go.dev/container/heap heap 库包装了堆相关的方法，能够自动维护一个堆，需要我们实现一个接口供 heap 的方法调用： 1 2 3 4 5 type Interface interface { sort.Interface Push(x any) // 将 x 加到堆的 Len() 处 Pop() any // 堆</description>
+    </item>
+    
     <item>
       <title>Go 标准库：container/list</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-go-list/</link>
