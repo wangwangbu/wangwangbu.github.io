@@ -6,7 +6,25 @@
     <description>Recent content on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cobra</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-cobra/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-cobra/</guid>
+      <description>Cobr 是一个快速构建 CLI 应用程序的工具，也是一个生成应用程序和命令文件的程序。</description>
+    </item>
+    
+    <item>
+      <title>二叉树的遍历</title>
+      <link>https://www.wangwangbu.com/posts/algo/tree/b-tree-traversal/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/algo/tree/b-tree-traversal/</guid>
+      <description>对于二叉树的前中后序遍历时二叉树的基本操作，递归写法非常简单但需要申请多个函数栈，学习非递归写法也十分有必要。</description>
+    </item>
+    
     <item>
       <title>Go 标准库：container/heap</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-go-heap/</link>
@@ -23,6 +41,15 @@
       
       <guid>https://www.wangwangbu.com/posts/zettel/z-go-list/</guid>
       <description>container/list 文档： https://pkg.go.dev/container/list list 是一个双向链表，其中每个元素是 Element 类型： 1 2 3 type Element struct { Value interface{} } 可用(*Element)Next方法和(*Element)Prev方法</description>
+    </item>
+    
+    <item>
+      <title>Leetcode 347 前 K 个高频元素</title>
+      <link>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-347/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-347/</guid>
+      <description>求解 Top K 问题是一个经典题目，研究使用小于 O(nlogn) 的方法求解，可以看作堆和快排的练习题。</description>
     </item>
     
     <item>

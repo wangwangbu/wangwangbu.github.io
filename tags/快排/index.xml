@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+  <channel>
+    <title>快排 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/tags/%E5%BF%AB%E6%8E%92/</link>
+    <description>Recent content in 快排 on 往往不的攻略笔记</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-cn</language>
+    <lastBuildDate>Tue, 14 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/%E5%BF%AB%E6%8E%92/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Leetcode 347 前 K 个高频元素</title>
+      <link>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-347/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/algo/leetcode/b-leetcode-347/</guid>
+      <description>求解 Top K 问题是一个经典题目，研究使用小于 O(nlogn) 的方法求解，可以看作堆和快排的练习题。</description>
+    </item>
+    
+  </channel>
+</rss>

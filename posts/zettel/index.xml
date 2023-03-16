@@ -6,7 +6,16 @@
     <description>Recent content in 奇怪的知识 ➕ on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cobra</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-cobra/</link>
+      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-cobra/</guid>
+      <description>Cobr 是一个快速构建 CLI 应用程序的工具，也是一个生成应用程序和命令文件的程序。</description>
+    </item>
+    
     <item>
       <title>Go 标准库：container/heap</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-go-heap/</link>
