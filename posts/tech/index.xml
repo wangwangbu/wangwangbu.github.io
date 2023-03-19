@@ -6,7 +6,34 @@
     <description>Recent content in 技巧 ➕ on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Fri, 10 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/tech/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 标准库：sort</title>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</guid>
+      <description>Go 标准库学习之 sort， 实现排序、自定义规则、对结构体排序。</description>
+    </item>
+    
+    <item>
+      <title>Go 标准库：container/heap</title>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-heap/</link>
+      <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-heap/</guid>
+      <description>Go 标准库学习之 container/heap 实现数据结构——堆。</description>
+    </item>
+    
+    <item>
+      <title>Go 标准库：container/list</title>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-list/</link>
+      <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-list/</guid>
+      <description>Go 标准库学习之 container/list 实现数据结构——双向链表。</description>
+    </item>
+    
     <item>
       <title>Linux 下 Go 安装与设置</title>
       <link>https://www.wangwangbu.com/posts/tech/linux-config/linux-go/b-linux-go/</link>

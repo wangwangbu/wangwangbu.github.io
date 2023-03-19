@@ -1,12 +1,21 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>container on 往往不的攻略笔记</title>
-    <link>https://www.wangwangbu.com/tags/container/</link>
-    <description>Recent content in container on 往往不的攻略笔记</description>
+    <title>Go 标准库 on 往往不的攻略笔记</title>
+    <link>https://www.wangwangbu.com/series/go-%E6%A0%87%E5%87%86%E5%BA%93/</link>
+    <description>Recent content in Go 标准库 on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 15 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/container/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/series/go-%E6%A0%87%E5%87%86%E5%BA%93/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 标准库：sort</title>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</guid>
+      <description>Go 标准库学习之 sort， 实现排序、自定义规则、对结构体排序。</description>
+    </item>
+    
     <item>
       <title>Go 标准库：container/heap</title>
       <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-heap/</link>

@@ -6,7 +6,16 @@
     <description>Recent content in Go on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go 标准库：sort</title>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</guid>
+      <description>Go 标准库学习之 sort， 实现排序、自定义规则、对结构体排序。</description>
+    </item>
+    
     <item>
       <title>Cobra</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-cobra/</link>
@@ -18,20 +27,20 @@
     
     <item>
       <title>Go 标准库：container/heap</title>
-      <link>https://www.wangwangbu.com/posts/zettel/z-go-heap/</link>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-heap/</link>
       <pubDate>Wed, 15 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/posts/zettel/z-go-heap/</guid>
-      <description>container/heap 文档： https://pkg.go.dev/container/heap heap 库包装了堆相关的方法，能够自动维护一个堆，需要我们实现一个接口供 heap 的方法调用： 1 2 3 4 5 type Interface interface { sort.Interface Push(x any) // 将 x 加到堆的 Len() 处 Pop() any // 堆</description>
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-heap/</guid>
+      <description>Go 标准库学习之 container/heap 实现数据结构——堆。</description>
     </item>
     
     <item>
       <title>Go 标准库：container/list</title>
-      <link>https://www.wangwangbu.com/posts/zettel/z-go-list/</link>
+      <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-list/</link>
       <pubDate>Tue, 14 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/posts/zettel/z-go-list/</guid>
-      <description>container/list 文档： https://pkg.go.dev/container/list list 是一个双向链表，其中每个元素是 Element 类型： 1 2 3 type Element struct { Value interface{} } 可用(*Element)Next方法和(*Element)Prev方法</description>
+      <guid>https://www.wangwangbu.com/posts/tech/go-std/b-go-list/</guid>
+      <description>Go 标准库学习之 container/list 实现数据结构——双向链表。</description>
     </item>
     
     <item>

@@ -6,22 +6,31 @@
     <description>Recent content in Tags on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 16 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go</title>
+      <link>https://www.wangwangbu.com/tags/go/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/go/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>sort</title>
+      <link>https://www.wangwangbu.com/tags/sort/</link>
+      <pubDate>Sun, 19 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/tags/sort/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Cobra</title>
       <link>https://www.wangwangbu.com/tags/cobra/</link>
       <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
       
       <guid>https://www.wangwangbu.com/tags/cobra/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Go</title>
-      <link>https://www.wangwangbu.com/tags/go/</link>
-      <pubDate>Thu, 16 Mar 2023 00:00:00 +0000</pubDate>
-      
-      <guid>https://www.wangwangbu.com/tags/go/</guid>
       <description></description>
     </item>
     
