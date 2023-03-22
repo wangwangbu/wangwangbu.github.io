@@ -6,7 +6,16 @@
     <description>Recent content on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 19 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go原理：调度器和GPM模型</title>
+      <link>https://www.wangwangbu.com/posts/b-go-gpm/</link>
+      <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/b-go-gpm/</guid>
+      <description>Go 的调度器原理学习记录，深入理解 GPM 模型，了解 Go 并发能力的来源。</description>
+    </item>
+    
     <item>
       <title>Go 标准库：sort</title>
       <link>https://www.wangwangbu.com/posts/tech/go-std/b-go-sort/</link>
