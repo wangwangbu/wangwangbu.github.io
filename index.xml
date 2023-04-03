@@ -6,13 +6,22 @@
     <description>Recent content on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Mon, 20 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 02 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>JWT 验证</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-jwt/</link>
+      <pubDate>Sun, 02 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-jwt/</guid>
+      <description>JWT 是一种网站登录状态的验证方式，服务端通过验证特定 token 来判断用户是否登录、访问权限等状态。主要特点是不依赖服务端状态，可以跨域验证。一个 JWT 格式</description>
+    </item>
+    
     <item>
       <title>Go原理：调度器和GPM模型</title>
-      <link>https://www.wangwangbu.com/posts/b-go-gpm/</link>
+      <link>https://www.wangwangbu.com/posts/tech/go-principle/b-go-gpm/</link>
       <pubDate>Mon, 20 Mar 2023 00:00:00 +0000</pubDate>
       
-      <guid>https://www.wangwangbu.com/posts/b-go-gpm/</guid>
+      <guid>https://www.wangwangbu.com/posts/tech/go-principle/b-go-gpm/</guid>
       <description>Go 的调度器原理学习记录，深入理解 GPM 模型，了解 Go 并发能力的来源。</description>
     </item>
     
