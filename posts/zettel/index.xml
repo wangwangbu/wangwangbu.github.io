@@ -6,7 +6,25 @@
     <description>Recent content in 知识 ➕ on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 02 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/posts/zettel/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RPC 远程过程调用</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-rpc/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-rpc/</guid>
+      <description>远程过程调用（Remote Procedure Call, RPC）是一种通讯协议，用于请求服务，包含传输协议和序列化协议。 和 HTTP 的区别： HTTP 是一种传输协议，而 RPC 是一种通讯方</description>
+    </item>
+    
+    <item>
+      <title>WebSocket</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-websocket/</link>
+      <pubDate>Tue, 04 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-websocket/</guid>
+      <description>WebSocket 是一个通过单个 TCP 连接提供全双工通信的协议，使服务器能够主动向客户端推送消息。</description>
+    </item>
+    
     <item>
       <title>JWT 验证</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-jwt/</link>

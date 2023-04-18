@@ -6,7 +6,16 @@
     <description>Recent content in RPC on 往往不的攻略笔记</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 09 Mar 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Apr 2023 00:00:00 +0000</lastBuildDate><atom:link href="https://www.wangwangbu.com/tags/rpc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>RPC 远程过程调用</title>
+      <link>https://www.wangwangbu.com/posts/zettel/z-rpc/</link>
+      <pubDate>Tue, 18 Apr 2023 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.wangwangbu.com/posts/zettel/z-rpc/</guid>
+      <description>远程过程调用（Remote Procedure Call, RPC）是一种通讯协议，用于请求服务，包含传输协议和序列化协议。 和 HTTP 的区别： HTTP 是一种传输协议，而 RPC 是一种通讯方</description>
+    </item>
+    
     <item>
       <title>Protocol Buffers</title>
       <link>https://www.wangwangbu.com/posts/zettel/z-protobuf/</link>
